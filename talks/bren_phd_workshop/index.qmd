@@ -1,0 +1,39 @@
+---
+abstract: PhD quant refresher 
+all_day: true
+authors: [Allison Horst]
+date: "2019-09-16"
+date_end: "2019-09-24"
+event: 
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/allison_horst
+# location: Source Themes HQ
+
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://docs.google.com/presentation/d/1-LEkB16lmeigCW9XaUt6M7pmExShaSQCKz4EHhpTGmI/edit?usp=sharing
+- icon: github-square
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/allisonhorst/bren-phd-workshop-r-materials
+math: true
+# projects:
+# - internal-project
+publishDate: "2019-09-16"
+summary: An intensive 7-day workshop to refresh quantitative skills (quantitative thinking, algebra, calculus, probability, hypothesis testing, regress) and introduce PhD students to reproducible code and workflows in R and RStudio.
+tags: []
+title: Quantitative skills and R/RStudio workshop for incoming Bren PhD students
+# url_code: ""
+# url_website: ""
+# url_slides: ""
+# url_video: ""
+---

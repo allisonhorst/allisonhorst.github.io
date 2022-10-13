@@ -1,0 +1,101 @@
+---
+title: "Merge conflicts: helping data science students merge their advanced skills into existing teams"
+subtitle: "What do we do to prepare students trained in R and Python for jobs with Excel, Google Sheets and Access?"
+date: 2021-03-31T00:00:00-07:00
+author: Allison Horst and Jacqueline Nolis
+featured_image: featured.jpg
+featured_image_width: 1200
+featured_image_height: 600
+---
+
+This post was written collaboratively by [**Jacqueline Nolis**](https://jnolis.com/) and me. Original data science language icons artwork (above) by Jacqueline Nolis.
+
+Students in data science programs build advanced skills in popular programming languages (e.g. Python, R, SQL, etc), platforms (e.g. RStudio, Jupyter Notebooks) and workflows (e.g. using version control with git). Entering the workplace, however, data science program graduates will often join teams further from the leading edge of data science tools and approaches. Having a junior employee with more sophisticated technical skills than the senior members can cause complications for both the junior employee and the team as a whole. We believe preparing students for merging their advanced skills into existing teams needs to be included in data science degree programs.
+
+### "Hello, ~~world~~ work."
+
+Data science programs often bake coding agility into their teaching curriculum by teaching and using different languages and platforms in different courses, for example how the UBC Master of Data Science program thoughtfully [integrates R and Python](https://ubc-mds.github.io/2020-02-03-teach-python-and-r/). Students also learn workflows and tools for reproducible, collaborative, cloud-based data science, putting them at the forefront of modern data science skills. Those same advanced skills that get a graduate a job, however, can cause conflict if not thoughtfully integrated into existing team practices. You can imagine if a program spends several years training a student in Python, and the team is entirely using Microsoft Access there is going to be a shock for all parties involved.
+
+If the goal of data science programs is to prepare students for their careers, that should also include efforts to: (1) understand - and realistically consider - the landscapes that graduates will be entering (re: tools, conventions, etc. where our grads are applying for and getting jobs), and (2) explicitly teach strategies to integrate advanced skills into teams.
+
+For example, how can/should a graduate adapt from a git/GitHub workflow into a team that uses a shared folder to manage and share files? How can/should a graduate writing reproducible code in R or Python integrate into a collaborative project existing in Google Sheets or Excel? How can/should a graduate trained in cloud computing work with and benefit a team with colleagues that work entirely locally?
+
+### Wait, does that actually happen?
+
+Yep.
+
+Data science grads are unlikely to join data science teams working with identical data science tools, workflows and mindsets they learned in their curriculum. The difference may be a crack or a chasm - depending on both the graduate and the team they're joining - but some dissonance should be expected.
+
+The gap may be widest for data science graduates joining science teams with field specific expertise, but without formal data science training. For example, some of our Master of Environmental Science and Management graduates, who have built substantial data science skills in R, ArcGIS / QGIS, git, GitHub, bash, and more, will join environmental consulting firms, non-profits, and NGOs that are primarily working - and doing genuinely great work - in Excel or Google Sheets.
+
+So, how do we train our graduates for that scenario?
+
+<figure>
+    <blockquote >
+        <h3>Allison sidebar</h3>
+        <p style="font-style: italic;">Hi all, I&#39;m looking for resources to help grads from DS programs (e.g. working in R/Py/SQL) integrate into teams using Excel. Like a “Good enough practices” paper w/ strategies to join &amp; support an Excel-based team? Thanks for suggestions! <a href="https://twitter.com/CMastication?ref_src=twsrc%5Etfw">@CMastication</a> <a href="https://twitter.com/robinson_es?ref_src=twsrc%5Etfw">@robinson_es</a> <a href="https://twitter.com/skyetetra?ref_src=twsrc%5Etfw">@skyetetra</a> <a href="https://t.co/WPMhzWU2wc">pic.twitter.com/WPMhzWU2wc</a></p>&mdash; Allison Horst (@allison_horst) <a href="https://twitter.com/allison_horst/status/1366815218261626880?ref_src=twsrc%5Etfw">March 2, 2021</a></p>
+    <p>Recently I tried to crowdsource resources for this problem on twitter. Two things stood out about the responses:</p>
+    <ol>
+    <li>Despite wide reach (>48,000 impressions and 31 retweets - including by influential software developers and data science educators), there were only **six** responses with actual suggestions</li>
+    <li>Of those six suggestions, five were to suggest tools and/or packages to work between languages and/or platforms (e.g. <a href="https://ycphs.github.io/openxlsx/">openxlsx</a>, <a href="https://googlesheets4.tidyverse.org/">googlesheets4</a>, <a href="https://powerbi.microsoft.com/">Power BI</a>, <a href="https://www.xlwings.org/">xlwings</a>).</li>
+    </ol>
+    <p class="mb-0">I haven’t systematically reviewed data science programs or literature for how these skills are included, but based on these responses my sense is the following: Resources to help data science program graduates integrate their advanced skills into existing teams are sparse, and the focus is often on tools to interface between tools, rather than professional and interpersonal strategies to join a team._</p>
+    </blockquote>
+</figure>
+
+Teaching tools to nimbly move between languages and platforms is important. For example, R packages like [openxlsx](https://ycphs.github.io/openxlsx/) and [googlesheets4](https://googlesheets4.tidyverse.org/) provide concrete paths forward for collaboration between team members split between coding in R and working in spreadsheets. However, at some level these aren't problems with tools so much as problems with conflicting human interests. Even if a programming language package effectively interfaces with a different tool, you still have to convince a team of people to use that interface. We believe there are two common scenarios that unfold due to the human nature of this problem, which we'll describe next.
+
+### OK...well what are students doing *now* without that training?
+
+There are two common scenarios that often occur when a student is trained in skills that are more advanced than required for their first job out of school. In one scenario the student doesn't use the skills they were trained in, and adapts to the role. In the other scenario the student tries to get the change organization to use the skills the student was trained. For the canonical example of a student trained in R/Python/SQL joining a team that exclusively uses Excel, either the student will switch to purely using Excel themselves or try and teach the organization to use some R, Python, or SQL.
+
+In the scenario where the recent graduate chooses to adapt to the existing technology of the team, this harms both the recent graduate and the team itself. The graduate is harmed because without the ability to practice the skills they learned in school those skills will likely atrophy. For example, git is a fairly complex skill to learn with a lot of nuanced components (like the difference between committing and staging). If a former student doesn't continuously use those skills, it will be much harder to relearn them later. Further, jobs that require more advanced skills like git are often desirable to data scientists, and having years of only using Excel will make it harder to interview for and obtain such a job in the future.
+
+Meanwhile, if a recent data science graduate backslides entirely into tools that a company is using that company is missing out on a valuable vector to advance their data science tools and workflows. It's very common for teams to get stuck using outdated technology because that's what people on the team are used to, and at a certain point a critical mass is reached where because so many people on the team are unwilling (or unable) to change, it becomes impossible to do so. New graduates with data science skills are a great way to avoid data science stagnancy. They can introduce new ideas and skills into an organization since they have been recently trained on the skills and have a fresh perspective. As an extreme example, if you have a team where everyone still uses FORTRAN because that's what they are used to, it would be unfortunate to hire a person who understands Python (and could help bridge the team to a more modern technology stack) and encourage them forget Python and learn FORTRAN.
+
+In the other scenario, where a former student tries to move the organization towards the newer technologies themselves, an immense amount of chaos can inadvertently be created. These sorts of situations generally arise when the former student thinks they have a better way to do something than the existing methods. For example, maybe an organization has critical data stored on a single Microsoft Access database under someone's desk. The student might (correctly) point out that this is dangerous, and suggest migrating the data to a cheap cloud database. A change like this might sound straightforward, but *a lot* of work has to be done in shifting to a new technology, including carefully considering questions like:
+
+-   Who on the team has the skill set to use this?
+-   How will it be maintained if the creator leaves the team?
+-   How does this align with the technology choices of other parts of the organization?
+
+Are all critically important to the team's implementation and enduring success with a new technology. Meanwhile, people who only recently entered the working world have the least perspective on these challenging questions. In practice what often happens is the new hire disregards those challenges, and instead implements what they learned in school without enough consideration for how it will be adopted, used and maintained by coworkers. Replacing a dated but well-understood technology with new technology that few can maintain can be far worse than keeping what was there before. A team may be left with something that is now more complicated for them to use and maintain, and no one who knows how to do it. A functioning system needs a robust set of measures in case of failures, and a single recent graduate new to the field cannot provide that on their own.
+
+<figure>
+    <blockquote >
+        <p style="font-size:18px; font-style: italic;">Replacing a dated but well-understood technology with new technology that few can maintain can be far worse than keeping what was there before.</p>
+    </blockquote>
+</figure>
+
+A former student trying to get a new technology adopted in an organization may also run into communication issues and conflicts when trying to make change in the organization. If the organization doesn't see the value in the new technologies (why use git when SharePoint is fine?) people may become frustrated that the new hire is bringing them up. When you join a new organization, especially having only recently become a data scientist, you rarely have much political capital, and it's very easy to spend that capital in places that ultimately don't prove useful. So this scenario where the recent hire tries to get a new technology adopted can leave a person frustrated and without tools to move forward in an organization.
+
+<figure>
+    <blockquote >
+    <h3>Jacqueline sidebar</h3>
+    <p style="font-style:italic;">Going into industry, I absolutely fell into the second scenario at multiple companies. Repeatedly I would introduce a technology that the rest of the team wasn’t familiar with, like using MATLAB while everyone else used SAS or R when people used Excel. I had valid reasons for believing why the technology I was introducing was better, but I failed to account for the reality that I would be the only one who used them. Anytime something broke I would have to be the one who fixed it and it was hard for my teammates to champion the work I did. In almost every situation I eventually ended up redoing my work in the tool the team used. Now that I am substantially more senior I am able to transition teams to newer technologies, but it takes a much deeper understanding of how organizations operate, and the fact that I have senior positions to influence from, to bring the change.</p>
+    </blockquote>
+</figure>
+
+### What we need to incorporate this into data science programs
+
+To reduce the potential conflicts we've described, preparing students in strategies and mindsets to merge their skills into existing teams should be part of data science programs. Teachers familiar with tools used in academia, however, may not have their finger on the current pulse of how data science is done in other sectors (industry, government, NGOs, non-profits, etc.). One effective way to keep knowledge flowing to academia and students is for faculty to help bridge more connections between industry and academia.
+
+Teachers in data science degree programs should familiarize themselves with the current landscape of data science tools and systems used by the types of teams they expect their students to join. That might include:
+
+-   Engaging with industry / non-academic partners about how they work with data
+-   Searching for and synthesizing skills in data science job postings
+-   Communicating with program alumni about how they are working post-graduation
+
+This will likely require teachers to step out of their comfort zone and communicate with people they don't normally talk to. But even one connection between an academic and a person working in industry can vastly improve how much the academic understands about industry.
+
+Teachers should also facilitate opportunities for students to work with and/or learn from non-academics in similar positions or workplaces, such as:
+
+-   Course projects, capstone & thesis projects that require students to integrate their skills into existing team workflows
+-   Data science summer internships and part time jobs
+-   Workshops, case studies, guest speakers, etc. to build skills on the human side of working with teams
+
+Many data science programs already have a client-proposed capstone project as part of their requirements. For example, the [University of British Columbia Master of Data Science](https://masterdatascience.ubc.ca/), [UC Santa Barbara Master of Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science), and [University of Washington Data Science Master's program](https://www.washington.edu/datasciencemasters/curriculum/) and others require students to work in groups to solve a problem while working with an (often external) client. Capstone advisers and teachers should ensure that students are keeping the clients' existing tools and workflows at front of mind so that students create a deliverable that is understandable, usable, and maintainable by people within the organization they're making it for. 
+
+These sorts of opportunities are great for students--not only do they give students a better understanding of what industry is like, but they also make students much more appealing on the job market. If teachers have industry connections then they can be used to help connect students too. Academic organizations are also starting to recognize how important these connections can be. One great example is [PIC Math](https://www.maa.org/programs-and-communities/professional-development/pic-math) (run by the Mathematical Association of America) which helps professors start learning how to start working with industrial sponsors and provides ways for students to do industry projects.
+
+While connecting better with industry will help solve this problem, it's certainly not the only method that could prove useful. This problem of overly equipped students is a common enough occurrence that academics and students should be well aware of it and as a field we should strive to make progress on it in the years ahead.

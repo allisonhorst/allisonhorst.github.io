@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Allison Horst and Jacqueline Nolis">
+<meta name="dcterms.date" content="2021-03-31">
+
+<title>Allison Horst - Merge conflicts: helping data science students merge their advanced skills into existing teams</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Allison Horst</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks_workshops.html">Talks / Workshops</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html">CV</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.qmd">Projects</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html">Blog</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/allisonhorst/"><i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/allison_horst"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#hello-world-work." id="toc-hello-world-work." class="nav-link active" data-scroll-target="#hello-world-work.">“Hello, <del>world</del> work.”</a></li>
+  <li><a href="#wait-does-that-actually-happen" id="toc-wait-does-that-actually-happen" class="nav-link" data-scroll-target="#wait-does-that-actually-happen">Wait, does that actually happen?</a></li>
+  <li><a href="#okwell-what-are-students-doing-now-without-that-training" id="toc-okwell-what-are-students-doing-now-without-that-training" class="nav-link" data-scroll-target="#okwell-what-are-students-doing-now-without-that-training">OK…well what are students doing <em>now</em> without that training?</a></li>
+  <li><a href="#what-we-need-to-incorporate-this-into-data-science-programs" id="toc-what-we-need-to-incorporate-this-into-data-science-programs" class="nav-link" data-scroll-target="#what-we-need-to-incorporate-this-into-data-science-programs">What we need to incorporate this into data science programs</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Merge conflicts: helping data science students merge their advanced skills into existing teams</h1>
+<p class="subtitle lead">What do we do to prepare students trained in R and Python for jobs with Excel, Google Sheets and Access?</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Allison Horst and Jacqueline Nolis </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 31, 2021</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>This post was written collaboratively by <a href="https://jnolis.com/"><strong>Jacqueline Nolis</strong></a> and me. Original data science language icons artwork (above) by Jacqueline Nolis.</p>
+<p>Students in data science programs build advanced skills in popular programming languages (e.g.&nbsp;Python, R, SQL, etc), platforms (e.g.&nbsp;RStudio, Jupyter Notebooks) and workflows (e.g.&nbsp;using version control with git). Entering the workplace, however, data science program graduates will often join teams further from the leading edge of data science tools and approaches. Having a junior employee with more sophisticated technical skills than the senior members can cause complications for both the junior employee and the team as a whole. We believe preparing students for merging their advanced skills into existing teams needs to be included in data science degree programs.</p>
+<section id="hello-world-work." class="level3">
+<h3 class="anchored" data-anchor-id="hello-world-work.">“Hello, <del>world</del> work.”</h3>
+<p>Data science programs often bake coding agility into their teaching curriculum by teaching and using different languages and platforms in different courses, for example how the UBC Master of Data Science program thoughtfully <a href="https://ubc-mds.github.io/2020-02-03-teach-python-and-r/">integrates R and Python</a>. Students also learn workflows and tools for reproducible, collaborative, cloud-based data science, putting them at the forefront of modern data science skills. Those same advanced skills that get a graduate a job, however, can cause conflict if not thoughtfully integrated into existing team practices. You can imagine if a program spends several years training a student in Python, and the team is entirely using Microsoft Access there is going to be a shock for all parties involved.</p>
+<p>If the goal of data science programs is to prepare students for their careers, that should also include efforts to: (1) understand - and realistically consider - the landscapes that graduates will be entering (re: tools, conventions, etc. where our grads are applying for and getting jobs), and (2) explicitly teach strategies to integrate advanced skills into teams.</p>
+<p>For example, how can/should a graduate adapt from a git/GitHub workflow into a team that uses a shared folder to manage and share files? How can/should a graduate writing reproducible code in R or Python integrate into a collaborative project existing in Google Sheets or Excel? How can/should a graduate trained in cloud computing work with and benefit a team with colleagues that work entirely locally?</p>
+</section>
+<section id="wait-does-that-actually-happen" class="level3">
+<h3 class="anchored" data-anchor-id="wait-does-that-actually-happen">Wait, does that actually happen?</h3>
+<p>Yep.</p>
+<p>Data science grads are unlikely to join data science teams working with identical data science tools, workflows and mindsets they learned in their curriculum. The difference may be a crack or a chasm - depending on both the graduate and the team they’re joining - but some dissonance should be expected.</p>
+<p>The gap may be widest for data science graduates joining science teams with field specific expertise, but without formal data science training. For example, some of our Master of Environmental Science and Management graduates, who have built substantial data science skills in R, ArcGIS / QGIS, git, GitHub, bash, and more, will join environmental consulting firms, non-profits, and NGOs that are primarily working - and doing genuinely great work - in Excel or Google Sheets.</p>
+<p>So, how do we train our graduates for that scenario?</p>
+<figure class="figure">
+<blockquote class="blockquote">
+<h3 class="anchored">
+Allison sidebar
+</h3>
+<p style="font-style: italic;">
+Hi all, I'm looking for resources to help grads from DS programs (e.g.&nbsp;working in R/Py/SQL) integrate into teams using Excel. Like a “Good enough practices” paper w/ strategies to join &amp; support an Excel-based team? Thanks for suggestions! <a href="https://twitter.com/CMastication?ref_src=twsrc%5Etfw"><span class="citation" data-cites="CMastication">@CMastication</span></a> <a href="https://twitter.com/robinson_es?ref_src=twsrc%5Etfw"><span class="citation" data-cites="robinson_es">@robinson_es</span></a> <a href="https://twitter.com/skyetetra?ref_src=twsrc%5Etfw"><span class="citation" data-cites="skyetetra">@skyetetra</span></a> <a href="https://t.co/WPMhzWU2wc">pic.twitter.com/WPMhzWU2wc</a>
+</p>
+— Allison Horst (<span class="citation" data-cites="allison_horst">@allison_horst</span>) <a href="https://twitter.com/allison_horst/status/1366815218261626880?ref_src=twsrc%5Etfw">March 2, 2021</a>
+<p></p>
+<p>
+Recently I tried to crowdsource resources for this problem on twitter. Two things stood out about the responses:
+</p>
+<ol>
+<li>
+Despite wide reach (&gt;48,000 impressions and 31 retweets - including by influential software developers and data science educators), there were only <strong>six</strong> responses with actual suggestions
+</li>
+<li>
+Of those six suggestions, five were to suggest tools and/or packages to work between languages and/or platforms (e.g.&nbsp;<a href="https://ycphs.github.io/openxlsx/">openxlsx</a>, <a href="https://googlesheets4.tidyverse.org/">googlesheets4</a>, <a href="https://powerbi.microsoft.com/">Power BI</a>, <a href="https://www.xlwings.org/">xlwings</a>).
+</li>
+</ol>
+<p class="mb-0">
+I haven’t systematically reviewed data science programs or literature for how these skills are included, but based on these responses my sense is the following: Resources to help data science program graduates integrate their advanced skills into existing teams are sparse, and the focus is often on tools to interface between tools, rather than professional and interpersonal strategies to join a team._
+</p>
+</blockquote>
+</figure>
+<p>Teaching tools to nimbly move between languages and platforms is important. For example, R packages like <a href="https://ycphs.github.io/openxlsx/">openxlsx</a> and <a href="https://googlesheets4.tidyverse.org/">googlesheets4</a> provide concrete paths forward for collaboration between team members split between coding in R and working in spreadsheets. However, at some level these aren’t problems with tools so much as problems with conflicting human interests. Even if a programming language package effectively interfaces with a different tool, you still have to convince a team of people to use that interface. We believe there are two common scenarios that unfold due to the human nature of this problem, which we’ll describe next.</p>
+</section>
+<section id="okwell-what-are-students-doing-now-without-that-training" class="level3">
+<h3 class="anchored" data-anchor-id="okwell-what-are-students-doing-now-without-that-training">OK…well what are students doing <em>now</em> without that training?</h3>
+<p>There are two common scenarios that often occur when a student is trained in skills that are more advanced than required for their first job out of school. In one scenario the student doesn’t use the skills they were trained in, and adapts to the role. In the other scenario the student tries to get the change organization to use the skills the student was trained. For the canonical example of a student trained in R/Python/SQL joining a team that exclusively uses Excel, either the student will switch to purely using Excel themselves or try and teach the organization to use some R, Python, or SQL.</p>
+<p>In the scenario where the recent graduate chooses to adapt to the existing technology of the team, this harms both the recent graduate and the team itself. The graduate is harmed because without the ability to practice the skills they learned in school those skills will likely atrophy. For example, git is a fairly complex skill to learn with a lot of nuanced components (like the difference between committing and staging). If a former student doesn’t continuously use those skills, it will be much harder to relearn them later. Further, jobs that require more advanced skills like git are often desirable to data scientists, and having years of only using Excel will make it harder to interview for and obtain such a job in the future.</p>
+<p>Meanwhile, if a recent data science graduate backslides entirely into tools that a company is using that company is missing out on a valuable vector to advance their data science tools and workflows. It’s very common for teams to get stuck using outdated technology because that’s what people on the team are used to, and at a certain point a critical mass is reached where because so many people on the team are unwilling (or unable) to change, it becomes impossible to do so. New graduates with data science skills are a great way to avoid data science stagnancy. They can introduce new ideas and skills into an organization since they have been recently trained on the skills and have a fresh perspective. As an extreme example, if you have a team where everyone still uses FORTRAN because that’s what they are used to, it would be unfortunate to hire a person who understands Python (and could help bridge the team to a more modern technology stack) and encourage them forget Python and learn FORTRAN.</p>
+<p>In the other scenario, where a former student tries to move the organization towards the newer technologies themselves, an immense amount of chaos can inadvertently be created. These sorts of situations generally arise when the former student thinks they have a better way to do something than the existing methods. For example, maybe an organization has critical data stored on a single Microsoft Access database under someone’s desk. The student might (correctly) point out that this is dangerous, and suggest migrating the data to a cheap cloud database. A change like this might sound straightforward, but <em>a lot</em> of work has to be done in shifting to a new technology, including carefully considering questions like:</p>
+<ul>
+<li>Who on the team has the skill set to use this?</li>
+<li>How will it be maintained if the creator leaves the team?</li>
+<li>How does this align with the technology choices of other parts of the organization?</li>
+</ul>
+<p>Are all critically important to the team’s implementation and enduring success with a new technology. Meanwhile, people who only recently entered the working world have the least perspective on these challenging questions. In practice what often happens is the new hire disregards those challenges, and instead implements what they learned in school without enough consideration for how it will be adopted, used and maintained by coworkers. Replacing a dated but well-understood technology with new technology that few can maintain can be far worse than keeping what was there before. A team may be left with something that is now more complicated for them to use and maintain, and no one who knows how to do it. A functioning system needs a robust set of measures in case of failures, and a single recent graduate new to the field cannot provide that on their own.</p>
+<figure class="figure">
+<blockquote class="blockquote">
+<p style="font-size:18px; font-style: italic;">
+Replacing a dated but well-understood technology with new technology that few can maintain can be far worse than keeping what was there before.
+</p>
+</blockquote>
+</figure>
+<p>A former student trying to get a new technology adopted in an organization may also run into communication issues and conflicts when trying to make change in the organization. If the organization doesn’t see the value in the new technologies (why use git when SharePoint is fine?) people may become frustrated that the new hire is bringing them up. When you join a new organization, especially having only recently become a data scientist, you rarely have much political capital, and it’s very easy to spend that capital in places that ultimately don’t prove useful. So this scenario where the recent hire tries to get a new technology adopted can leave a person frustrated and without tools to move forward in an organization.</p>
+<figure class="figure">
+<blockquote class="blockquote">
+<h3 class="anchored">
+Jacqueline sidebar
+</h3>
+<p style="font-style:italic;">
+Going into industry, I absolutely fell into the second scenario at multiple companies. Repeatedly I would introduce a technology that the rest of the team wasn’t familiar with, like using MATLAB while everyone else used SAS or R when people used Excel. I had valid reasons for believing why the technology I was introducing was better, but I failed to account for the reality that I would be the only one who used them. Anytime something broke I would have to be the one who fixed it and it was hard for my teammates to champion the work I did. In almost every situation I eventually ended up redoing my work in the tool the team used. Now that I am substantially more senior I am able to transition teams to newer technologies, but it takes a much deeper understanding of how organizations operate, and the fact that I have senior positions to influence from, to bring the change.
+</p>
+</blockquote>
+</figure>
+</section>
+<section id="what-we-need-to-incorporate-this-into-data-science-programs" class="level3">
+<h3 class="anchored" data-anchor-id="what-we-need-to-incorporate-this-into-data-science-programs">What we need to incorporate this into data science programs</h3>
+<p>To reduce the potential conflicts we’ve described, preparing students in strategies and mindsets to merge their skills into existing teams should be part of data science programs. Teachers familiar with tools used in academia, however, may not have their finger on the current pulse of how data science is done in other sectors (industry, government, NGOs, non-profits, etc.). One effective way to keep knowledge flowing to academia and students is for faculty to help bridge more connections between industry and academia.</p>
+<p>Teachers in data science degree programs should familiarize themselves with the current landscape of data science tools and systems used by the types of teams they expect their students to join. That might include:</p>
+<ul>
+<li>Engaging with industry / non-academic partners about how they work with data</li>
+<li>Searching for and synthesizing skills in data science job postings</li>
+<li>Communicating with program alumni about how they are working post-graduation</li>
+</ul>
+<p>This will likely require teachers to step out of their comfort zone and communicate with people they don’t normally talk to. But even one connection between an academic and a person working in industry can vastly improve how much the academic understands about industry.</p>
+<p>Teachers should also facilitate opportunities for students to work with and/or learn from non-academics in similar positions or workplaces, such as:</p>
+<ul>
+<li>Course projects, capstone &amp; thesis projects that require students to integrate their skills into existing team workflows</li>
+<li>Data science summer internships and part time jobs</li>
+<li>Workshops, case studies, guest speakers, etc. to build skills on the human side of working with teams</li>
+</ul>
+<p>Many data science programs already have a client-proposed capstone project as part of their requirements. For example, the <a href="https://masterdatascience.ubc.ca/">University of British Columbia Master of Data Science</a>, <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science">UC Santa Barbara Master of Environmental Data Science</a>, and <a href="https://www.washington.edu/datasciencemasters/curriculum/">University of Washington Data Science Master’s program</a> and others require students to work in groups to solve a problem while working with an (often external) client. Capstone advisers and teachers should ensure that students are keeping the clients’ existing tools and workflows at front of mind so that students create a deliverable that is understandable, usable, and maintainable by people within the organization they’re making it for.</p>
+<p>These sorts of opportunities are great for students–not only do they give students a better understanding of what industry is like, but they also make students much more appealing on the job market. If teachers have industry connections then they can be used to help connect students too. Academic organizations are also starting to recognize how important these connections can be. One great example is <a href="https://www.maa.org/programs-and-communities/professional-development/pic-math">PIC Math</a> (run by the Mathematical Association of America) which helps professors start learning how to start working with industrial sponsors and provides ways for students to do industry projects.</p>
+<p>While connecting better with industry will help solve this problem, it’s certainly not the only method that could prove useful. This problem of overly equipped students is a common enough occurrence that academics and students should be well aware of it and as a field we should strive to make progress on it in the years ahead.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

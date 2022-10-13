@@ -1,0 +1,61 @@
+---
+title: Sharing (R lab) keys for success
+author: Allison Horst
+date: '2019-04-29'
+slug: share-keys
+categories:
+  - R
+  - teaching
+tags:
+  - R
+description: ""
+type: post
+---
+
+I just finished my sixth year of teaching intro stats and data analysis in R to environmental studies grad students. For the first five, I convinced myself that I shouldn't share my instructor code keys with students before our weekly #rstats labs.
+
+Here are a couple of my commonly regurgitated excuses, based on absolutely nothing: 
+
+> "If I share the key beforehand, no one will show up to labs!"
+
+> "If I share the key beforehand, people will just run the key and not actively code along, so they won't learn as much!"
+
+This year, a student was struggling to keep up in our computer labs and asked to get the instructor keys beforehand. Labs progress quickly, and they wanted to explore the the key to identify challenging/confusing chunks and prepare for them in advance.
+
+First I was like "eeeehhhhh," then I was like "pssshh fine I'll email it to you but please don't share it with anybody else because [see excuses above]," then eventually I was like "this is ridiculous let's see what happens if I share the instructor keys beforehand with everyone in the class."
+
+Here is the nightmare that ensued: 
+
+## 1. Everyone just still came to labs.
+
+Seriously, attrition rate = zero. 
+
+## 2. Everyone was still coding in labs. 
+
+My sense was that most students didn't even look at the key despite knowing it was posted (also fine). But in each lab, several students had printed out the key as an additional resource to help them along. In short: self-motivated students who benefitted from exploring lab keys beforehand *could*, and the rest just continued showing up and following along without it like they always had. 
+
+This year, I actually found **no down side** to posting my instructor code keys for students and TAs to see in advance. I'm sure there are anecdotal horror stories of shared keys ... FINISH THIS
+
+## In fact, there are clear benefits. Like: 
+
+- If students want to spend **more** time looking over code before labs, why in the world would I ever **not** encourage their interest and effort?
+
+- When students have to miss labs (illness, personal days, conferences, etc.) they know that the materials are all available without request - which means less stress and emailing for everyone.
+
+- For anyone who *does* find themselves falling behind, there's always a key available for them to figure out where they got lost or went awry. Another small way to reduce student stress.
+
+- It's actually **less** work for me. I can just push all materials to GitHub (data, lab templates, keys), without feeling like I have to hide pieces in different repos or folders or whatever. One (openly shared) Rproj to rule them all. 
+
+## What DOES this require? 
+
+Believing in students.
+
+When it comes right down to it, I wasn't sharing instructor keys because I didn't give my students the credit they deserved. Which was really lame of me, because like 99.9% of the time they've only ever been *more* committed and motivated than I expect them to be.
+
+Anyway, the students asking to review the lab materials beforehand are probably **not** the ones trying to weasel their way out of course effort. 
+
+
+I'll continue posting all #rstats lab keys (heck, you can even see them: [ESM 206](https://github.com/allisonhorst/esm-206-2018) / [ESM 244](https://github.com/allisonhorst/esm-244-2019)), with gratitude to students who've repeatedly proven my reservations wrong. 
+
+
+  

@@ -1,0 +1,32 @@
+---
+title: RStudio Artist-in-Residence 2019/2020!
+author: Allison Horst
+date: '2019-11-19'
+slug: []
+categories:
+  - art
+  - R
+  - RStudio
+tags:
+  - art
+  - R
+  - RStudio
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2020-03-01T00:02:33-08:00'
+featured: no
+projects: []
+---
+
+Since I started drawing R- and stats-related illustrations for my students in 2018, I have been overwhelmed by the reception from the #rstats community on twitter. 
+
+I am extremely excited to share that as of October 2019, I am [RStudio](https://rstudio.com/)'s first Artist-in-Residence!
+
+![](featured_horst_air.png)
+
+You can read more about my motivation and goals for the position on the [RStudio blog](https://blog.rstudio.com/2019/11/18/artist-in-residence/). 
+
+I look forward to sharing a whole bunch more art with you over the next year! 
+
+Allison

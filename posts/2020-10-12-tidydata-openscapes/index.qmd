@@ -1,0 +1,11 @@
+---
+title: "Tidy data for collaboration, efficiency and reproducibility"
+author: Allison Horst
+date: '2020-03-02'
+---
+
+[Dr. Julia Lowndes](https://jules32.github.io/) spearheaded a collaboration to create a visual explanation of how working with tidy data can make data science more efficient, reproducible, and collaborative! 
+
+Check out our blog post, including original illustrations, [HERE](https://www.openscapes.org/blog/2020/10/12/tidy-data/). 
+
+Make friends with tidy data! 

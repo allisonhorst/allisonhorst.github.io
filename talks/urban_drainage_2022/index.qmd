@@ -1,0 +1,35 @@
+---
+all_day: true
+authors: [Allison Horst]
+date: "2022-01-11"
+# date_end: "2019-11-14"
+event: Urban Drainage Modeling Conference 2022
+event_url: https://udm2022.org/
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/allison_horst
+# location: Source Themes HQ
+
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://docs.google.com/presentation/d/e/2PACX-1vRUyHPGS0635SyPM1o57iflKI1K_HaJhr_580sidKaNJ6Re2AOeuSLwU0fp2Dx6VjBxfHiOtorBqT6j/pub?start=false&loop=false&delayms=3000#slide=id.p
+
+math: true
+# projects:
+# - internal-project
+publishDate: "2022-01-11"
+summary: Invited plenary talk for the Urban Drainage Modeling Conference, hybrid remote and at SCCWRP. Abstract -  Getting my hands on new, raw environmental data is exciting, and so is diving into a fresh pool of data wrangling, analysis and visualization. In this talk, I consider different flavors of “missing the point,” asking “What might I be missing when I launch headfirst into a new data science project?” Motivated by past mistakes, I share three ways I’ve missed the point when starting a project due to (1) missing data, (2) misinterpretation, and (3) missed opportunity. Through personal anecdotes and public examples I highlight the risk of these “misses” in data science projects, then share tools and strategies to avoid them moving forward, so that we can all dive enthusiastically into projects a bit more responsibly. 
+tags: []
+title: Missing the point - missing values, misinterpretations, and missed opportunities in environmental data science. 
+# url_code: ""
+# url_website: ""
+# url_slides: ""
+# url_video: ""
+---

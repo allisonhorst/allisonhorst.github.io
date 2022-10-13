@@ -1,0 +1,38 @@
+---
+all_day: true
+authors: [Allison Horst]
+date: "2021-11-04"
+# date_end: "2019-11-14"
+event: UCSB QMSS Seminar Series
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/allison_horst
+# location: Source Themes HQ
+
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://allisonhorst.github.io/qmss-r-teaching-tools/
+- icon: github-square
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/allisonhorst/qmss-r-teaching-tools
+math: true
+# projects:
+# - internal-project
+publishDate: "2021-11-04"
+summary: An invited talk on strategies for introducing beginners to R for UCSB's Quantitative Methods in Social Sciences program. 
+tags: []
+title: Tips & tools for gentle R introductions
+# url_code: ""
+# url_website: ""
+# url_slides: ""
+# url_video: ""
+---

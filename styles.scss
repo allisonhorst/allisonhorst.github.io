@@ -1,0 +1,47 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+// Colors
+$white: #FFFFFF;
+$darkgray: #2C2C2C;
+$gray: #949799;
+$lightgray: #E5E5E5;
+$ocean: #00a97d;
+$rust: #bc5441;
+$tangerine: #ffb741;
+$mint: #ecf8f4;
+$olive: #989b00;
+$chartreuse: #e1e500;
+
+
+// Base document colors
+$navbar-bg: $rust; // navbar
+$navbar-fg: $white; // navbar foreground elements
+$navbar-hl: $tangerine; // highlight color when hovering over navbar links
+$body-bg: $white; // page background 
+$body-color: $darkgray; // page text 
+$footer-bg: $lightgray; // footer 
+$link-color: $ocean; // hyperlinks 
+
+// Inline code
+$code-bg: $lightgray; // inline code background color
+$code-color: $darkgray; // inline code text color
+
+// Code blocks
+$code-block-bg: $white; // code block background color
+
+h1 {
+  color: $rust;
+}
+
+h2 {
+  color: $ocean;
+}
+
+div.quarto-about-trestles .about-entity .about-link {
+    color: #FFFFFF !important;
+    text-decoration: none;
+    border: none;
+    background-color: #00a97d;
+}

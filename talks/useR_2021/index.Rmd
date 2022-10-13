@@ -1,0 +1,39 @@
+---
+all_day: true
+authors: [Allison Horst and Julien Brun]
+date: "2021-07-07"
+# date_end: "2019-11-14"
+event: useR!2021 Conference
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/allison_horst
+# location: Source Themes HQ
+
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://docs.google.com/presentation/d/e/2PACX-1vRh8CHEYuZN4drrXuiaoKiZ5Fep9Oqb4Oq0N0vDE2JvT3sa7jXqnMtVM5Giu3DlYWQ47JWWDVArtepf/pub?start=false&loop=false&delayms=3000
+- icon: video-camera
+  icon_pack: fa
+  name: Video
+  url: https://www.youtube.com/watch?v=vd8XZSuY_Rs&list=PL4IzsxWztPdmHhzrXDAOpq4zS_peAVty2&index=6&t=12s
+
+math: true
+# projects:
+# - internal-project
+publishDate: "2021-07-07"
+summary: A short talk at useR! 2021, describing how we are creating the LTERdatasampler package. 
+tags: []
+title: Developing a datasets based R package to teach environmental data science
+# url_code: ""
+# url_website: ""
+# url_slides: ""
+# url_video: ""
+---

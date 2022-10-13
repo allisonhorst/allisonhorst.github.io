@@ -1,0 +1,30 @@
+---
+abstract: A talk on creativity in data science education.  
+all_day: true
+authors: [Allison Horst]
+date: "2020-11-18"
+# date_end: "2019-11-14"
+event: 
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://docs.google.com/presentation/d/e/2PACX-1vTfnDtrL3Qu07JgvqFX7mB8EWkHjjoEqFGcjQqyU1jSJh1jkIBbXKaY00UWI1DHztg3fR_lcMOCSfzP/pub?start=false&loop=false&delayms=3000
+# location: Source Themes HQ
+math: true
+# projects:
+# - internal-project
+publishDate: "2020-11-20"
+summary: A talk for NHS-R (November 2020) on creative contributions in data science education.
+tags: []
+title: Illustrating R - Creative contributions for R education and engagement
+# url_code: ""
+# url_pdf: ""
+# url_slides: ""
+# url_video: ""
+---

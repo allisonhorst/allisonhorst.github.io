@@ -1,0 +1,34 @@
+---
+abstract: How to become a missing explorer!  
+all_day: true
+authors: [Allison Horst]
+date: "2020-05-19"
+# date_end: "2019-11-14"
+event: 
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://docs.google.com/presentation/d/e/2PACX-1vQRXYzpq9lrAnBpl_xGoVFXpJicn8eBqEzowMUPgB8XOj4UCvYaGFN6R_jMz56UIdL9zAEdiraDU3ph/pub?start=false&loop=false&delayms=3000
+- icon: chalkboard-teacher
+  icon_pack: fas
+  name: Tutorial
+  url: https://allisonhorst.shinyapps.io/missingexplorer/
+location: Bren School of Environmental Science and Management (UCSB)
+math: true
+# projects:
+# - internal-project
+publishDate: "2020-05-19"
+summary: A presentation on why and how we should think about missing values in our environmental data, and how we can use Nick Tierney's naniar package in R to help us becoming a missing (data) explorer.
+tags: []
+title: How to Become a Missing Explorer (talk)
+# url_code: ""
+# url_pdf: ""
+# url_slides: ""
+# url_video: ""
+---

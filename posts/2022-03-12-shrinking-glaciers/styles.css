@@ -1,0 +1,8 @@
+div.quarto-about-trestles .about-entity .about-links {
+  flex-direction: row;
+  column-gap: 1em !important;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  background-color: #00a97d !important;
+  color: #FFFFFF;
+}

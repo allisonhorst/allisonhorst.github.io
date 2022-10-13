@@ -1,0 +1,16 @@
+---
+title: "Learning GitHub Classroom"
+author: Allison Horst
+date: '2021-09-02'
+categories:
+  - GitHub
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+Recently, a small group of us at the Bren School affiliated with our new Master of Environmental Data Science program decided to learn GitHub Classroom together. 
+We wrote about our experience and takeaways for the Academic Data Science Alliance Community Blog. Ready it [here](https://academicdatascience.org/resources/2021-08-10-blog)!

@@ -1,0 +1,15 @@
+---
+title: "Blog posts"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  image-align: right
+  max-description-length: 175
+  date-format: medium
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+---

@@ -1,0 +1,31 @@
+---
+title: palmerpenguins on CRAN
+author: Allison Horst
+date: '2020-08-01'
+slug: []
+categories:
+  - data science
+  - R
+  - RStudio
+tags:
+  - data science
+  - education
+subtitle: 'palmerpenguins'
+summary: 'The palmerpenguins data package provides a wonderful alternative to the iris data'
+authors: []
+lastmod: '2020-03-01T00:02:33-08:00'
+featured: no
+projects: []
+---
+
+With Drs. [Alison Hill](https://alison.rbind.io/) and [Kristen B. Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php), we developed a data package with structural size measurements (and more!) for 3 species of penguins recorded at islands in Palmer Archipelago, Antarctica. The penguins data are a great drop-in alternative to the iris data (which is most commonly cited for its use in eugenicist R.A. Fisher's 1936 publication in *Annals of Eugenics*).
+
+Learn more! 
+
+Read our post on the RStudio Education blog: https://education.rstudio.com/blog/2020/07/palmerpenguins-cran/
+
+Visit our package website for more information: https://allisonhorst.github.io/palmerpenguins/
+
+Find them on CRAN: https://cran.r-project.org/web/packages/palmerpenguins/index.html
+
+Have fun with the palmerpenguins! 

@@ -1,0 +1,34 @@
+---
+all_day: true
+authors: [Allison Horst]
+date: "2021-04-21"
+# date_end: "2019-11-14"
+event: 
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/allison_horst
+# location: Source Themes HQ
+
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://docs.google.com/presentation/d/e/2PACX-1vTirsKHStO7Dg42Nkzgre05k49DtJtcia_ej3d4Q1OBNg9sRGPfUF0Q4-EH17iUiLYDwYp7qtrHCr2A/pub?start=false&loop=false&delayms=3000
+math: true
+# projects:
+# - internal-project
+publishDate: "2021-04-21"
+summary: A flash talk on the new palmerpenguins package in R for the Santa Barbara R Users Group.  
+tags: []
+title: Tired - iris. Wired - penguins.
+# url_code: ""
+# url_website: ""
+# url_slides: ""
+# url_video: ""
+---

@@ -1,0 +1,24 @@
+---
+title: 'Teach R with learnr'
+author: 'Allison Horst'
+date: '2020-05-30'
+slug: teach-r-with-learnr
+categories:
+  - teaching
+  - R
+  - RStudio
+tags:
+  - learnr
+  - naniar
+  - teaching
+subtitle: 'A powerful tool for remote teaching'
+summary: ''
+authors: []
+lastmod: '2020-05-30T06:02:59-07:00'
+featured: no
+projects: []
+---
+
+**Cross-posted from the RStudio Education blog.**
+
+Check out my [new post](https://education.rstudio.com/blog/2020/05/learnr-for-remote/) for RStudio Ed, describing how I use the `learnr` package to facilitate teaching and learning for remote classes with R beginners!

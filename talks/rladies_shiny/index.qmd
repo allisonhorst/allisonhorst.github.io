@@ -1,0 +1,39 @@
+---
+abstract: A 1-hour introduction to Shiny in R, led during a Santa Barbara R-Ladies session in Oct 2019. 
+all_day: true
+authors: [Allison Horst]
+date: "2019-10-30"
+# date_end: "2019-09-24"
+event: 
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/allison_horst
+# location: Source Themes HQ
+
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://drive.google.com/open?id=1QVgvVsVoYOXjqHKKx2o-cMOYLdh7FAq8Hyv_y-dSZmI
+- icon: github-square
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/allisonhorst/shiny-basics-sb-r-ladies
+math: true
+# projects:
+# - internal-project
+publishDate: "2019-10-31"
+summary: A spooky (but not scary) introduction to building Shiny apps in R, presented at SB R-Ladies.
+tags: []
+title: SB R-Ladies Intro to (spooky) Shiny
+# url_code: ""
+# url_website: ""
+# url_slides: ""
+# url_video: ""
+---

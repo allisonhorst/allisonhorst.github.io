@@ -1,0 +1,30 @@
+---
+abstract: An intro dataviz workshop for SCCWRP 
+all_day: true
+authors: [Allison Horst]
+date: "2019-11-14"
+# date_end: "2019-11-14"
+event: 
+event_url: 
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+- icon: slideshare
+  icon_pack: fab
+  name: Slides
+  url: https://docs.google.com/presentation/d/1EA_PfTiSXh8J0JH03d1pcA6luVJeN2oUGozxhZoiydQ/edit?usp=sharing
+# location: Source Themes HQ
+math: true
+# projects:
+# - internal-project
+publishDate: "2019-11-15"
+summary: A 1/2 day basics of data visualization workshop covering the hierarchy of responsible and effective data visualization, aesthetics, and considerations
+tags: []
+title: SCCWRP Data Visualization Workshop
+# url_code: ""
+# url_pdf: ""
+# url_slides: ""
+# url_video: ""
+---

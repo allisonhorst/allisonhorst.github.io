@@ -1,0 +1,29 @@
+---
+title: Penguin wrangling in dplyr - a learnr tutorial
+author: Allison Horst
+date: '2021-02-08'
+slug: []
+categories:
+  - data science
+  - R
+  - RStudio
+  - dplyr
+tags:
+  - data science
+  - education
+  - data wrangling
+summary: 'An art-filled learnr tutorial introducing some useful data wrangling functions in dplyr (part of the tidyverse)'
+authors: []
+featured: no
+projects: []
+---
+
+I recently made a `learnr` tutorial introducing some functions in `dplyr` for data wrangling. Check it out: 
+
+https://allisonhorst.shinyapps.io/dplyr-learnr/
+
+Here's the GitHub repo in case anyone wants to modify/update this for your own courses: 
+
+https://github.com/allisonhorst/dplyr-learnr
+
+Have fun wrangling penguins! 

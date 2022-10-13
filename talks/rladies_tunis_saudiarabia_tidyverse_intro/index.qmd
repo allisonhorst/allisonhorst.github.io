@@ -1,0 +1,38 @@
+---
+all_day: true
+authors: [Allison Horst]
+date: "2021-02-13"
+# date_end: "2019-11-14"
+event: 
+event_url: https://allisonhorst.shinyapps.io/edge-of-the-tidyverse/
+featured: false
+# image: 
+#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
+#   focal_point: Right
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/allison_horst
+# location: Source Themes HQ
+
+- icon: book
+  icon_pack: fas
+  name: Tutorial
+  url: https://allisonhorst.shinyapps.io/edge-of-the-tidyverse/
+- icon: github-square
+  icon_pack: fab
+  name: GitHub
+  url: https://github.com/allisonhorst/r-ladies-tunis-2021
+math: true
+# projects:
+# - internal-project
+publishDate: "2021-02-13"
+summary: A 2-hour code-along "Quick Flight to the Edge of the Tidyverse"
+tags: []
+title: "R-Ladies & R-Ladies Dammam Workshop: A Quick Flight to the Edge of the Tidyverse"
+# url_code: ""
+# url_website: ""
+# url_slides: ""
+# url_video: ""
+---

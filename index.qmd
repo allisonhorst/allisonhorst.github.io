@@ -1,7 +1,20 @@
 ---
-title: "allisonhorst.github.io"
+title: "Allison Horst"
+about:
+  template: trestles
+  image: horst_pic.jpeg
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/allison_horst
+    - icon: github
+      text: Github
+      href: https://github.com/allisonhorst/
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/allison-horst-16a885158/
 ---
 
-This is a Quarto website.
+Hi everyone, I’m Allison! I'm a Data Scientist Advocate at [Observable](https://observablehq.com/). From 2012 - 2022, I was a teaching faculty member at UC Santa Barbara, where I developed and taught curriculum (statistics, programming, data science, data visualization, science communication) and advised research projects in graduate programs for Environmental Science & Management and Master of Environmental Data Science programs.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I actively work to contribute to open educational resources, including software for data science education including the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) R package, the [lterdatasampler](https://lter.github.io/lterdatasampler/) package, [The Missing Data Book](https://tmb.njtierney.com/) (with Nick Tierney) and through my [data science and statistics artwork](https://github.com/allisonhorst/stats-illustrations/). I have worked as Artist-in-Residence at RStudio (2019 - 2020) and the National Center for Ecological Analysis and Synthesis (2018 - 2019). 

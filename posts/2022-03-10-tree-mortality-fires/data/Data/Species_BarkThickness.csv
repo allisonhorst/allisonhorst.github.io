@@ -1,0 +1,161 @@
+PLANTS_Species_Code,Genus_Species,BT_coef,FOFEM BarkThicknessName,FOFEM_BT_Code,BT_Subsitution
+ABAM,Abies amabilis,0.047,Abies amabilis -- Pacific Silver Fir,26,
+ABCO,Abies concolor,0.048,Abies concolor -- White Fir,27,
+ABGR,Abies grandis,0.046,Abies grandis -- Grand Fir,25,
+ABGRLA,Abies grandis or lasiocarpa,0.044,(Abies grandis -- Grand Fir +  Abies lasiocarpa -- Subalpine Fir)/2,(25+20)/2,Combined spp
+ABIES,Abies ,0.052,Abies species -- Firs,30,Genus
+ABLA,Abies lasiocarpa,0.041,Abies lasiocarpa -- Subalpine Fir,20,
+ABMA,Abies magnifica,0.039,Abies magnifica -- Red Fir,18,
+ACFL,Acer floridanum ,0.029,Acer species -- Maples,8,Genus for Species
+ACGL,Acer glabrum,0.029,Acer species -- Maples,8,Genus for Species
+ACGR3,Acer grandidentatum,0.029,Acer species -- Maples,8,Genus for Species
+ACMA3,Acer macrophyllum,0.024,Acer macrophyllum -- Bigleaf maple,3,
+ACRU,Acer rubrum,0.028,Acer rubrum -- Red maple,7,
+ACSA3,Acer saccharum,0.033,Acer saccharum -- Sugar maple,12,
+AEGL,Aesculus glabra,0.036,Aesculus glabra -- Ohio buckeye,15,
+AILAN,Ailanthus ,0.05,Ailanthus altissima -- Ailanthus,29,Spp for Genus
+ALINT,Alnus incana,0.026,Alnus rubra -- Red alder,5,Species for Species - A. rubra
+ALJU,Albizia julibrissin,,,,No code
+ALRU2,Alnus rubra,0.026,Alnus rubra -- Red alder,5,
+AMAR3,Amelanchier arborea,0.05,Amelanchier arborea -- Serviceberry,29,
+ARME,Arbutus menziesii,0.06,Arbutus menziesii -- Pacific madrone,34,
+ARSP2,Aralia spinosa,,,,No code
+ASTR,Asimina triloba,,,,No code
+BELE,Betula lenta,0.03,Betula lenta -- Sweet birch                    ,9,
+CACA18,Carpinus caroliniana,0.03,Carpinus caroliniana -- American hornbeam,9,
+CADE12,Castanea dentata,0.04,Castanea dentata -- American chestnut,19,
+CADE27,Calocedrus decurrens,0.06,Libocedrus decurrens ,34,
+CAGL8,Carya glabra,0.037,Carya glabra -- Pignut hickory,16,
+CANO9,Chamaecyparis nootkatensis,0.022,Chamaecyparis nootkatenis -- Alaska-cedar,2,
+CAPA24,Carya pallida,0.044,Carya species -- Hickories,23,Genus for Species
+CAPU9,Castanea pumila,0.04,Castanea dentata -- American chestnut,19,Species for Species - C. dentata
+CARYA,Carya ,0.044,Carya species -- Hickories,23,Genus
+CATE9,Carya texana,0.04,Carya texana -- Black hickory,19,
+CATO6,Carya tomentosa,0.043,Carya tomentosa -- Mockernut hickory,22,
+CECA4,Cercis canadensis,0.035,Cercis canadensis -- Eastern redbud            ,14,
+CELA,Celtis laevigata,0.036,Celtis laevigata ,15,
+CEOC,Celtis occidentalis,0.035,Celtis occidentalis -- Hackberry,14,
+CHCH7,Chrysolepis chrysophylla,0.045,Castanopsis chrysophylla -- Golden chinkapin   ,24,
+CHLA,Chamaecyparis lawsoniana,0.081,Chamaecyparis lawsoniana -- PortOrford-cedar,39,
+COFL2,Cornus florida,0.041,Cornus florida -- Flowering dogwood,20,
+CONU4,Cornus nuttallii,0.062,Cornus nuttallii -- Pacific dogwood,35,
+CRATA,Crataegus ,0.038,Crataegus species -- Hawthorns,17,also BT 35
+CRMA5,Crataegus marshallii,0.038,Crataegus species -- Hawthorns,17,Genus for Species; also BT code 35 = 0.062
+DIVI5,Diospyros virginiana,0.041,Diospyros virginiana -- Persimmon,20,
+FAGR,Fagus grandifolia,0.025,Fagus grandifolia -- American beech,4,
+FRAM2,Fraxinus americana,0.042,Fraxinus americana -- White ash,21,
+FRAXI,Fraxinus ,0.042,Fraxinus species -- Ashes,21,
+FRCA13,Frangula caroliniana,,,,No code
+FRPE,Fraxinus pennsylvanica,0.042,Fraxinus species -- Ashes,21,Genus for Species
+GLTR,Gleditsia triacanthos,0.038,Gleditsia triacanthos -- Honeylocust,17,
+HAVI4,Hamamelis virginiana,,,,No code
+HODI,Holodiscus discolor ,,,,No code
+ILOP,Ilex opaca,0.042,Ilex opaca -- American holly,21,
+JUDE2,Juniperus deppeana,0.033,Juniperus species -- Junipers/Redcedars,12,Genus for Species
+JUMO,Juniperus monosperma,0.025,Juniperus occidentalis -- Western juniper,4,Species for Species - J. occidentalis
+JUNI,Juglans nigra,0.041,Juglans nigra -- Black walnut,20,
+JUOC,Juniperus occidentalis,0.025,Juniperus occidentalis -- Western juniper,4,
+JUOS,Juniperus osteosperma,0.025,Juniperus occidentalis -- Western juniper,4,Species for Species - J. occidentalis
+JUSC2,Juniperus scopulorum,0.025,Juniperus occidentalis -- Western juniper,4,Species for Species - J. occidentalis
+JUVI,Juniperus virginiana,0.038,Juniperus virginiana -- Eastern redcedar,17,
+LAOC,Larix occidentalis,0.063,Larix occidentalis -- Western Larch            ,36,
+LIRIO,Liriodendron ,0.041,Liriodendron tulipifera -- Yellow-poplar,20,Spp for Genus
+LIST2,Liquidambar styraciflua,0.036,Liquidambar styraciflua -- sweetgum            ,15,
+LITU,Liriodendron tulipifera,0.041,Liriodendron tulipifera -- Yellow-poplar,20,
+MAFR,Magnolia fraseri,0.039,Magnolia species -- Magnolias,18,Genus for Species
+MAGR4,Magnolia grandiflora,0.033,Magnolia grandiflora -- Southern magnolia,12,
+MATR,Magnolia tripetala,0.039,Magnolia species -- Magnolias,18,Genus for Species
+MAVI2,Magnolia virginiana,0.04,Magnolia virginiana -- Sweetbay,19,
+MORU2,Morus rubra,0.038,Morus rubra -- Red mulberry,17,
+MORUS,Morus ,0.033,Morus species,12,
+NODE3,Notholithocarpus densiflorus,0.052,Lithocarpus densiflorus -- Tanoak,30,
+NYSY,Nyssa sylvatica,0.039,Nyssa sylvatica -- Black tupelo                ,18,"var. biflora code is 16, which = 0.037"
+OSVI,Ostrya virginiana,0.037,Ostrya virginiana -- Eastern hophornbeam,16,
+OXAR,Oxydendrum arboreum,0.036,Oxydendrum arboreum -- Sourwood,15,
+PEBO,Persea borbonia,0.038,Persea borbonia -- Redbay,17,
+PIAL,Pinus albicaulis,0.03,Pinus albicaulis -- Whitebark pine,9,
+PIAR5,Pinus arizonica,0.063,Pinus ponderosa -- Ponderosa pine,36,Species for species - P. ponderosa
+PIAT,Pinus attenuata,0.03,Pinus attenuata -- Knobcone pine,9,
+PIBA2,Pinus banksiana,0.04,Pinus banksiana -- Jack pine,19,
+PICO,Pinus contorta,0.028,Pinus contorta -- Lodgepole pine,7,
+PICO3,Pinus coulteri,0.068,Pinus jeffreyi -- Jeffrey pine,37,Species for species - P. jeffreyi
+PIEC2,Pinus echinata,0.037,Pinus echinata -- Shortleaf pine,16,
+PIED,Pinus edulis,0.03,Pinus species -- Pines,9,Genus for Species
+PIEL,Pinus elliottii,0.055,Pinus elliottii -- Slash pine,31,
+PIEN,Picea engelmannii,0.036,Picea engelmannii -- Engelmann spruce,15,
+PIENPU,Picea P. pungens or P. engelmannii,0.034,(Picea pungens -- Blue spruce + Picea engelmannii -- Engelmann spruce)/2,(15+10)/2,Combined spp
+PIFL2,Pinus flexilis,0.03,Pinus flexilis -- Limber pine,9,
+PIGL,Picea glauca,0.025,Picea glauca -- White spruce,4,
+PIGL2,Pinus glabra,0.035,Pinus glabra -- Spruce pine,14,
+PIJE,Pinus jeffreyi,0.068,Pinus jeffreyi -- Jeffrey pine,37,
+PIJEPO,Pinus jeffreyi or ponderosa,0.066,(Pinus jeffreyi -- Jeffrey pine + Pinus ponderosa -- Ponderosa pine)/2,(37+36)/2,Combined spp
+PILA,Pinus lambertiana,0.072,Pinus lambertiana -- Sugar pine,38,
+PIMA,Picea mariana,0.032,Picea mariana -- Black spruce,11,
+PIMO,Pinus monophylla ,0.03,Pinus species -- Pines,9,Genus for Species
+PIMO3,Pinus monticola,0.035,Pinus monticola -- Western white pine,14,
+PINUS,Pinus ,0.03,Pinus species -- Pines,9,
+PIPA2,Pinus palustris,0.049,Pinus palustrus -- Longleaf pine,28,Longleaf SBT = 0.435 + (0.031 * DBH)
+PIPO,Pinus ponderosa,0.063,Pinus ponderosa -- Ponderosa pine,36,
+PIPU,Picea pungens,0.04,Pinus pungens -- Table mountain pine,19,
+PIRE,Pinus resinosa,0.043,Pinus resinosa -- Red pine,22,
+PIRI,Pinus rigida,0.045,Pinus rigida -- Pitch pine,24,
+PISA2,Pinus sabiniana,0.03,Pinus species -- Pines,9,Genus for Species
+PISI,Picea sitchensis,0.027,Picea sitchensis -- Sitka spruce,6,
+PIST,Pinus strobus,0.045,Pinus strobus -- Eastern white pine,24,
+PIST3,Pinus strobiformis,0.03,Pinus species -- Pines,9,Genus for Species
+PITA,Pinus taeda,0.052,Pinus taeda -- Loblolly pine,30,
+PIVI2,Pinus virginiana,0.033,Pinus virginiana -- Virginia pine,12,
+PLATA,Platanus ,0.033,Plantus occidentalis -- American sycamore,12,Spp for Genus
+PLOC,Platanus occidentalis,0.033,Plantus occidentalis -- American sycamore,12,
+PODEW,Populus deltoides ssp. wislizeni,0.04,Populus deltoides -- Eastern cottonwood,19,Populus deltoides
+POGR4,Populus grandidentata,0.039,Populus grandidentata -- Bigtooth aspen,18,
+POTR5,Populus tremuloides,0.044,Populus tremuloides -- Quaking aspen,23,
+PRAM,Prunus americana,0.04,Prunus americana -- American plum,19,
+PREM,Prunus emarginata,0.062,Prunus emarginata -- Bitter cherry,35,
+PRME,Prunus mexicana,0.05,Prunus species -- Cherries,29,Genus for Species
+PRSE2,Prunus serotina,0.03,Prunus serotina -- Black cherry,9,
+PRUM,Prunus umbellata,0.05,Prunus species -- Cherries,29,Genus for Species
+PRUNU,Prunus ,0.045,Prunus species -- Cherries,24,
+PSMA,Pseudotsuga macrocarpa,0.063,Pseudotsuga menziesii -- Douglas-fir,36,Species for Species
+PSME,Pseudotsuga menziesii,0.063,Pseudotsuga menziesii -- Douglas-fir,36,
+QUAL,Quercus alba,0.04,Quercus alba -- White oak,19,
+QUCH2,Quercus chrysolepis,0.024,Quercus chrysolepis -- Canyon live oak,3,
+QUCO2,Quercus coccinea,0.04,Quercus coccinea -- Scarlet oak,19,
+QUERC,Quercus species,0.045,Quercus species -- Oaks,24,
+QUFA,Quercus falcata,0.044,Quercus falcata -- Southern red oak,23,
+QUGA,Quercus gambelii,0.045,Quercus species -- Oaks,24,Genus for Species
+QUGA4,Quercus garryana,0.029,Quercus garryana -- Oregon white oak,8,
+QUIN,Quercus incana,0.038,Quercus incana -- Bluejack oak,17,
+QUKE,Quercus kelloggii,0.03,Quercus kellogii -- Califonia black oak,9,
+QULA2,Quercus laevis,0.037,Quercus laevis -- Turkey oak,16,
+QULA3,Quercus laurifolia,0.036,Quercus laurifolia -- Laurel oak,15,
+QUMA3,Quercus marilandica,0.037,Quercus marilandica -- Blackjack oak,16,
+QUMO4,Quercus montana,0.049,Quercus prinus -- Chestnut oak,28,
+QUMU,Quercus muehlenbergii,0.042,Quercus muehlenbergii -- Chinkapin oak,21,
+QUNI,Quercus nigra,0.036,Quercus nigra -- Water oak,15,
+QUPH,Quercus phellos,0.041,Quercus phellos -- Willow oak,20,
+QURU,Quercus rubra,0.042,Quercus rubra -- Northern red oak,21,
+QUST,Quercus stellata,0.044,Quercus stellata -- Post oak,23,
+QUVE,Quercus velutina,0.045,Quercus velutina -- Black oak,24,
+QUWI2,Quercus wislizeni,0.034,Quercus wislizenii -- Interior live oak,13,
+RHCO,Rhus copallinum,,,,No code
+ROPS,Robinia pseudoacacia,0.049,Robinia pseudoacacia -- Black locust,28,
+SAAL5,Sassafras albidum,0.035,Sassafras albidum -- Sassafras,14,
+SALIX,Salix ,0.041,Salix species -- Willows,20,
+SASC,Salix scouleriana,0.041,Salix species -- Willows,20,Genus for Species
+SASSA,Sassafras ,0.035,Sassafras albidum -- Sassafras,14,Spp for Genus
+SEGI2,Sequoiadendron giganteum,0.081,Sequoia gigantea -- Giant sequoia,39,
+SESE3,Sequoia sempervirens,0.081,Sequoia sempervirens -- Redwood,39,
+TABR2,Taxus brevifolia,0.025,Taxus brevifolia -- Pacific yew,4,
+THPL,Thuja plicata,0.035,Thuja plicata -- Western redcedar,14,
+TIAM,Tilia americana,0.038,Tilia americana -- American basswod,17,
+TOCA,Torreya californica,,,,No code
+TSCA,Tsuga canadensis,0.039,Tsuga canadensis -- Eastern hemlock,18,
+TSHE,Tsuga heterophylla,0.04,Tsuga heterophylla -- Western hemlock,19,
+TSME,Tsuga mertensiana,0.04,Tsuga mertensiana -- Mountain hemlock,19,
+ULAL,Ulmus alata,0.031,Ulmus alata -- Winged elm,10,
+ULAM,Ulmus americana,0.031,Ulmus americana -- American elm,10,
+ULRU,Ulmus rubra,0.032,Ulmus rubra -- Slippery elm,11,
+VAAR,Vaccinium arboreum,,,,No code
+VIRU,Viburnum rufidulum,,,,No code
+2TREE,Unknown species,,,,No code

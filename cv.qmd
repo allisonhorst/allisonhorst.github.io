@@ -1,0 +1,98 @@
+---
+title: "Allison Horst - CV"
+editor: visual
+---
+
+## Overview
+
+**Currently:** Data Scientist Advocate at [Observable](https://observablehq.com). **Previously:** 10+ years as a teaching faculty member at UC Santa Barbara. 10+ years experience creating and leading math, statistics, computer science and data science courses; leader in building communities of practice to support data science learners and teachers including as co-founder of the Santa Barbara Chapter of R-Ladies; active contributor to open educational resources for data science through software, tutorials, open courses and workshop materials, and original artwork for data science and statistics instruction.
+
+## Education
+
+**Ph.D., Environmental Science and Management (2012)**
+
+-   Emphasis: Environmental nanotoxicology
+-   Bren School of Environmental Science & Management
+-   University of California Center for Environmental Implications of Nanotechnology
+-   University of California at Santa Barbara, Santa Barbara, CA 93106-5131
+
+**M.S., Mechanical Engineering (2007)**
+
+-   Emphasis: Environmental and Ocean Engineering
+-   Department of Mechanical Engineering
+-   University of California at Santa Barbara, Santa Barbara, CA 93106-5070
+
+**B.S., Chemical Engineering (2007)**
+
+-   Emphasis: Environment, Risk and Management
+-   Department of Chemical Engineering
+-   University of California at Santa Barbara, Santa Barbara, CA 93106-5080
+
+## Distinctions
+
+**UC Santa Barbara Distinguished Teaching Award (2019)**
+
+Awarded the 2019 campus-wide Distinguished Teaching Award at UC Santa Barbara for "excellence in teaching and inspiring innovation in teaching."
+
+**Bren School of Environmental Science & Management Distinguished Teaching Award (2018)**
+
+Awarded the 2018 Distinguished Teaching Award by Bren School graduate students.
+
+## Teaching
+
+**Assistant Teaching Professor (July 2020 - October 2022)**
+
+Bren School of Environmental Science and Management, UC Santa Barbara
+
+**Selected courses:**
+
+-   EDS 212: Essential Math in Environmental Data Science
+-   EDS 221: Scientific Programming Essentials
+-   EDS 411 AB: Environmental Data Science - Master's Capstone Course
+-   ESM 206: Statistics and Data Analysis in Environmental Science
+-   ESM 244: Advanced Data Analysis
+-   ESM 438: Presentation Skills for Environmental Professionals
+
+**Continuing Lecturer - Data Science and Statistics (2013 - 2020)**
+
+UC Santa Barbara
+
+## Selected Contributions
+
+**AM Horst,** AP Hill, KB Gorman (2022). [Penguins data in the palmerpenguins R package: an alternative to Anderson's Irises.](https://journal.r-project.org/articles/RJ-2022-020/) The R Journal. doi: 10.32614/RJ-2022-020
+
+**Tierney, NJ and AM Horst.** (2022). [The Missing Book](https://tmb.njtierney.com/).
+
+**AM Horst,** AP Hill, KB Gorman (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. https://allisonhorst.github.io/palmerpenguins/
+
+Lowndes, JSS and **Horst AM** (2020). [R for Excel Users](https://rstudio-conf-2020.github.io/r-for-excel/) Materials prepared for the 2020 RStudio Conference.
+
+**Statistics and R artwork for learners and teachers (November 2018 - present)**
+
+Free Creative Commons illustrations for R and statistics users, teachers and community members.github.com/allisonhorst/stats-illustrations
+
+## Professional Activities
+
+**Editorial Board - Journal of Open Source Education (August 2021 - present)**
+
+**Openscapes Mentorship Program (December 2018 -- June 2019)**
+
+Under mentor Dr. Julia Lowndes (Mozilla Open Science Fellow, NCEAS), was one of 7 selected researchers and teachers to participate in the inaugural year of the Openscapes program -- a 10-week program to empower teams of environmental scientists with tools and community needed to build, use and share data science skills.
+
+**RStudio Artist-in-Residence (October 2019 -- October 2020)**
+
+As the first RStudio (now Posit) Artist-in-Residence, created illustrations to make learning R, and code more broadly, more accessible and welcoming to useRs. The images are used around the world in courses and presentations as friendly visual aids to help lower R learning barriers.
+
+## Community Building
+
+**Environmental Data Science Summit - Organizing Committee Member (2021)**
+
+Organizing Committee member for the upcoming Environmental Data Science Summit.
+
+**R-Ladies Santa Barbara -- Co-founder, organizer, instructor & active member (2018 - present)**
+
+R-Ladies is a global organization striving to increase diversity (and diversity more broadly) in the R-user community. Our Santa Barbara R-Ladies chapter hosts 5 -- 6 events per year, including sessions aimed at: training technical skills, flash talks from R-Ladies, networking meetups, invited guest speakers, and more.
+
+**UCSB TidyTuesday Coding Club -- Founder, organizer, & participant (2019 - 2021)**
+
+Tidy Tuesday is a "weekly social data project in R" started by the online R for Data Science community that encourages participants to practice wrangling, visualizing, and sharing analyses using a semi-tidy dataset each week. At the UCSB Tidy Tuesday Coding Club, people can work together on Tidy Tuesdays or other R-related projects in-person, meet other R-users across campus, and build a more cohesive R community at UCSB in a no-stress social setting. Attendance is usually \~ 12 - 20 people from multiple departments across campus.

@@ -2,17 +2,30 @@ project:
   type: website
 
 website:
-  title: "allisonhorst.github.io"
+  title: "Allison Horst"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: talks_workshops.qmd
+        text: Talks / Workshops
+      - href: cv.qmd
+        text: CV
+      - href: projects.qmd
+        text: Projects
+      - href: posts.qmd
+        text: Blog
+    right:
+      - icon: github
+        href: https://github.com/allisonhorst/
+        aria-label: GitHub
+      - icon: twitter
+        href: https://twitter.com/allison_horst
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: styles.scss
+    mainfont: 'Bellota Text'
     toc: true
 
 
