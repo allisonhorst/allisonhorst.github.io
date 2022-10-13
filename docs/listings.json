@@ -1,0 +1,51 @@
+[
+  {
+    "listing": "/talks_workshops.html",
+    "items": [
+      "/talks/nceas_roundtable_2022/index.html",
+      "/talks/urban_drainage_2022_rmarkdown_workshop/index.html",
+      "/talks/urban_drainage_2022/index.html",
+      "/talks/ucsb_ds_summit_2021/index.html",
+      "/talks/qmss_seminar_teachingR_2021/index.html",
+      "/talks/jsm_2021/index.html",
+      "/talks/esa_2021/index.html",
+      "/talks/useR_2021/index.html",
+      "/talks/dsxd_education_session_2021/index.html",
+      "/talks/sb_users_penguins_flash/index.html",
+      "/talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html",
+      "/talks/ucsb_qmss_rmarkdown_workshop/index.html",
+      "/talks/rstudio_global_2021/index.html",
+      "/talks/nhs_r_2020/index.html",
+      "/talks/ucsb_gds_2020/index.html",
+      "/talks/missing_explorer_2020/index.html",
+      "/talks/r_for_excel_2020/index.html",
+      "/talks/sccwrp_dataviz_2019/index.html",
+      "/talks/rladies_shiny/index.html",
+      "/talks/bren_phd_workshop/index.html",
+      "/talks/bren_alumni_2019/index.html",
+      "/talks/ecodatasci_ggplot_intro/index.html"
+    ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/2022-03-12-shrinking-glaciers/index.html",
+      "/posts/2022-03-10-tree-mortality-fires/index.html",
+      "/posts/2022-03-08-nw-reno-roads/index.html",
+      "/posts/2022-03-07-scrape-dart-fish/index.html",
+      "/posts/2021-09-02-learning-github-classroom/index.html",
+      "/posts/2021-03-31-joining-teams/index.html",
+      "/posts/2021-02-08-dplyr-learnr/index.html",
+      "/posts/2020-08-01-palmerpenguins-on-cran/index.html",
+      "/posts/2020-05-30-teach-r-with-learnr/index.html",
+      "/posts/2020-10-12-tidydata-openscapes/index.html",
+      "/posts/2020-02-29-birds-of-a-feather-drawn-together/index.html",
+      "/posts/2020-03-01-r-for-excel-users-at-rstudioconf-2020/index.html",
+      "/posts/2019-11-19-rstudio-artist-in-residence/index.html",
+      "/posts/2019-05-30-horst-lab-openscapes-case-study/index.html",
+      "/posts/2019-05-02-tidy-tuesday-coding-club/index.html",
+      "/posts/2019-04-29-share-keys/index.html",
+      "/posts/2019-04-28-do-your-worst/index.html"
+    ]
+  }
+]
