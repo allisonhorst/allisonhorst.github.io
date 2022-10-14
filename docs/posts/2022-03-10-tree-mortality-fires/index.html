@@ -393,16 +393,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code># A tibble: 22 × 3
    yr_since_fire live_dead     n
            &lt;dbl&gt; &lt;fct&gt;     &lt;int&gt;
- 1             0 0         39807
- 2             0 1           551
- 3             1 0         39079
- 4             1 1         10441
- 5             2 0         26911
- 6             2 1         12867
- 7             3 0         23746
- 8             3 1         14810
- 9             4 0          8618
-10             4 1         14939
+ 1             0 0         39722
+ 2             0 1           548
+ 3             1 0         39286
+ 4             1 1         10351
+ 5             2 0         27051
+ 6             2 1         12835
+ 7             3 0         23613
+ 8             3 1         14754
+ 9             4 0          8574
+10             4 1         15073
 # … with 12 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ponderosa_test <span class="sc">%&gt;%</span> </span>
@@ -411,16 +411,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code># A tibble: 22 × 3
    yr_since_fire live_dead     n
            &lt;dbl&gt; &lt;fct&gt;     &lt;int&gt;
- 1             0 0          9862
- 2             0 1           138
- 3             1 0          9800
- 4             1 1          2528
- 5             2 0          6797
- 6             2 1          3227
- 7             3 0          5807
- 8             3 1          3691
- 9             4 0          2185
-10             4 1          3814
+ 1             0 0          9947
+ 2             0 1           141
+ 3             1 0          9593
+ 4             1 1          2618
+ 5             2 0          6657
+ 6             2 1          3259
+ 7             3 0          5940
+ 8             3 1          3747
+ 9             4 0          2229
+10             4 1          3680
 # … with 12 more rows</code></pre>
 </div>
 </div>
@@ -471,8 +471,8 @@ Inputs:
 <pre><code># A tibble: 2 × 4
   .metric  .estimator .estimate .config             
   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;               
-1 accuracy binary         0.807 Preprocessor1_Model1
-2 roc_auc  binary         0.879 Preprocessor1_Model1</code></pre>
+1 accuracy binary         0.803 Preprocessor1_Model1
+2 roc_auc  binary         0.876 Preprocessor1_Model1</code></pre>
 </div>
 </div>
 </section>
@@ -487,26 +487,26 @@ Inputs:
 <pre><code># A tibble: 20 × 7
    id               .pred_0 .pred_1  .row .pred_class live_dead .config         
    &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt; &lt;int&gt; &lt;fct&gt;       &lt;fct&gt;     &lt;chr&gt;           
- 1 train/test split  0.0756  0.924      7 1           1         Preprocessor1_M…
- 2 train/test split  0.0201  0.980      9 1           1         Preprocessor1_M…
- 3 train/test split  0.722   0.278     13 0           0         Preprocessor1_M…
- 4 train/test split  0.722   0.278     27 0           0         Preprocessor1_M…
- 5 train/test split  0.722   0.278     30 0           1         Preprocessor1_M…
- 6 train/test split  0.0201  0.980     37 1           1         Preprocessor1_M…
- 7 train/test split  0.912   0.0878    39 0           0         Preprocessor1_M…
- 8 train/test split  0.839   0.161     40 0           0         Preprocessor1_M…
- 9 train/test split  0.839   0.161     44 0           0         Preprocessor1_M…
-10 train/test split  0.566   0.434     68 0           1         Preprocessor1_M…
-11 train/test split  0.0393  0.961     73 1           1         Preprocessor1_M…
-12 train/test split  0.912   0.0878    80 0           0         Preprocessor1_M…
-13 train/test split  0.246   0.754     88 1           1         Preprocessor1_M…
-14 train/test split  0.839   0.161     94 0           1         Preprocessor1_M…
-15 train/test split  0.140   0.860     99 1           1         Preprocessor1_M…
-16 train/test split  0.0102  0.990    103 1           1         Preprocessor1_M…
-17 train/test split  0.0102  0.990    113 1           1         Preprocessor1_M…
-18 train/test split  0.839   0.161    115 0           0         Preprocessor1_M…
-19 train/test split  0.0756  0.924    125 1           1         Preprocessor1_M…
-20 train/test split  0.0393  0.961    126 1           1         Preprocessor1_M…</code></pre>
+ 1 train/test split  0.566   0.434      3 0           1         Preprocessor1_M…
+ 2 train/test split  0.0748  0.925      7 1           1         Preprocessor1_M…
+ 3 train/test split  0.0197  0.980      9 1           1         Preprocessor1_M…
+ 4 train/test split  0.839   0.161     29 0           1         Preprocessor1_M…
+ 5 train/test split  0.0197  0.980     37 1           1         Preprocessor1_M…
+ 6 train/test split  0.723   0.277     45 0           0         Preprocessor1_M…
+ 7 train/test split  0.913   0.0871    47 0           0         Preprocessor1_M…
+ 8 train/test split  0.839   0.161     48 0           0         Preprocessor1_M…
+ 9 train/test split  0.723   0.277     49 0           0         Preprocessor1_M…
+10 train/test split  0.723   0.277     52 0           1         Preprocessor1_M…
+11 train/test split  0.394   0.606     54 1           1         Preprocessor1_M…
+12 train/test split  0.139   0.861     56 1           1         Preprocessor1_M…
+13 train/test split  0.0748  0.925     57 1           1         Preprocessor1_M…
+14 train/test split  0.566   0.434     83 0           0         Preprocessor1_M…
+15 train/test split  0.245   0.755     88 1           1         Preprocessor1_M…
+16 train/test split  0.723   0.277     95 0           1         Preprocessor1_M…
+17 train/test split  0.566   0.434     96 0           1         Preprocessor1_M…
+18 train/test split  0.245   0.755     98 1           1         Preprocessor1_M…
+19 train/test split  0.139   0.861     99 1           1         Preprocessor1_M…
+20 train/test split  0.0197  0.980    102 1           1         Preprocessor1_M…</code></pre>
 </div>
 </div>
 </section>
@@ -520,8 +520,8 @@ Inputs:
 <div class="cell-output cell-output-stdout">
 <pre><code>          Truth
 Prediction     0     1
-         0 32266  9584
-         1  4600 26875</code></pre>
+         0 32137  9765
+         1  4694 26729</code></pre>
 </div>
 </div>
 </section>
@@ -634,16 +634,16 @@ Residual Deviance: 318000   AIC: 318000</code></pre>
 <pre><code># A tibble: 22 × 3
    yr_since_fire live_dead     n
            &lt;dbl&gt; &lt;fct&gt;     &lt;int&gt;
- 1             0 0         77679
- 2             0 1          2896
- 3             1 0         73535
- 4             1 1         30570
- 5             2 0         51740
- 6             2 1         47514
- 7             3 0         43250
- 8             3 1         54816
- 9             4 0         22449
-10             4 1         55292
+ 1             0 0         77753
+ 2             0 1          2885
+ 3             1 0         73285
+ 4             1 1         30681
+ 5             2 0         51584
+ 6             2 1         47304
+ 7             3 0         43240
+ 8             3 1         54699
+ 9             4 0         22243
+10             4 1         55460
 # … with 12 more rows</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>trees_20_test <span class="sc">%&gt;%</span> </span>
@@ -652,16 +652,16 @@ Residual Deviance: 318000   AIC: 318000</code></pre>
 <pre><code># A tibble: 22 × 3
    yr_since_fire live_dead     n
            &lt;dbl&gt; &lt;fct&gt;     &lt;int&gt;
- 1             0 0         19447
- 2             0 1           758
- 3             1 0         18228
- 4             1 1          7624
- 5             2 0         12796
- 6             2 1         11552
- 7             3 0         10711
- 8             3 1         13652
- 9             4 0          5577
-10             4 1         14151
+ 1             0 0         19373
+ 2             0 1           769
+ 3             1 0         18478
+ 4             1 1          7513
+ 5             2 0         12952
+ 6             2 1         11762
+ 7             3 0         10721
+ 8             3 1         13769
+ 9             4 0          5783
+10             4 1         13983
 # … with 12 more rows</code></pre>
 </div>
 </div>
@@ -712,7 +712,7 @@ Inputs:
   .metric  .estimator .estimate .config             
   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;               
 1 accuracy binary         0.821 Preprocessor1_Model1
-2 roc_auc  binary         0.893 Preprocessor1_Model1</code></pre>
+2 roc_auc  binary         0.894 Preprocessor1_Model1</code></pre>
 </div>
 </div>
 </section>
@@ -726,8 +726,8 @@ Inputs:
 <div class="cell-output cell-output-stdout">
 <pre><code>          Truth
 Prediction      0      1
-         0  57369  19920
-         1  17253 113156</code></pre>
+         0  57791  19979
+         1  17272 112656</code></pre>
 </div>
 </div>
 </section>

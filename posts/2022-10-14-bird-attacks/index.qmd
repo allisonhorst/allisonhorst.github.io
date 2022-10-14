@@ -10,7 +10,9 @@ editor: visual
 
 ## A-well a bird bird bird...
 
-Why did this post happen? Well, at around 11pm last night I saw [this tweet](https://twitter.com/tcarpenter216/status/1580771753873518593):
+Gotcha.
+
+Around 11pm last night I saw [this tweet](https://twitter.com/tcarpenter216/status/1580771753873518593):
 
 \
 [![Twitter post with an image of two tables, together titled "Bird Attacks 1974." The two tables are "Table 1. Bird attacks: body parts injured" and "Table 2. Bird attacks: nature of wounds." The tables contain counts for various injuries and wounds . The data is silly and fake. For example, some of the "wounds" in the dataset include "Cut by stinging remarks" from a bird, and "Feelings hurt" by a bird.](images/paste-68076610.png){width="553"}](https://twitter.com/tcarpenter216/status/1580771753873518593)
@@ -20,17 +22,9 @@ Tom's instinct makes perfect sense. My first thought was ["CHICKEN WINGS."](http
 In this post:
 
 -   Image cropping with magick
-
-```{=html}
-<!-- -->
-```
 -   Optical character recognition (OCR) with tesseract
-
 -   Low elegance, no shame data tidying in R
-
--   Static & interactive visualizations in JavaScript
-
-fowl, cuckoo, wing, fly, flap, take-off, beak, feather, soar, flock, rail, lark, duck, swallow
+-   Static & interactive visualizations in JavaScript with Plot & imported D3 charts
 
 ## Get the tools and data:
 
@@ -58,10 +52,9 @@ Here's the cropped version of the image:
 birds
 ```
 
-## Optical character recognition 
+## Optical character recognition
 
-Optical character recognition (OCR), or text recognition, lets you extract text information from images (e.g. non-selectable PDFs, JPEGs, PNGs, etc.). The [tesseract package](https://cran.r-project.org/web/packages/tesseract/vignettes/intro.html) in R "provides R bindings to [Tesseract](https://github.com/tesseract-ocr/tesseract): a
-powerful optical character recognition (OCR) engine that supports over 100 languages."
+Optical character recognition (OCR), or text recognition, lets you extract text information from images (e.g. non-selectable PDFs, JPEGs, PNGs, etc.). The [tesseract package](https://cran.r-project.org/web/packages/tesseract/vignettes/intro.html) in R "provides R bindings to [Tesseract](https://github.com/tesseract-ocr/tesseract): a powerful optical character recognition (OCR) engine that supports over 100 languages."
 
 Create the engine, then OCR those birds:
 

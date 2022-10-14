@@ -10,8 +10,9 @@ $lightgray: #E5E5E5;
 $ocean: #05aabb;
 $rust: #bc5441;
 $ltcoral: #ffe1df;
-$raspberry: #e4404d;
+$raspberry: #872b49;
 $cream: #fcf9f4;
+$rose: #c27e97;
 
 
 // Base document colors
@@ -21,7 +22,7 @@ $navbar-hl: $ltcoral; // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
 $body-color: $darkgray; // page text 
 $footer-bg: $lightgray; // footer 
-$link-color: $ocean; // hyperlinks 
+$link-color: $rose; // hyperlinks 
 
 // Inline code
 $code-bg: $lightgray; // inline code background color
@@ -35,14 +36,14 @@ h1 {
 }
 
 h2 {
-  color: $ocean;
+  color: $rose;
 }
 
 div.quarto-about-trestles .about-entity .about-link {
-    color: #FFFFFF !important;
+    color: #fcf9f4 !important;
     text-decoration: none;
     border: none;
-    background-color: #05aabb;
+    background-color: #c27e97;
 }
 
 .navbar-title {
