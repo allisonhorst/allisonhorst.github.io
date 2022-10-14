@@ -1,0 +1,7 @@
+---
+authors: [Allison Horst and Julien Brun]
+date: "2021-07-07"
+title: Developing a datasets based R package to teach environmental data science
+---
+
+Presented virtually at the useR!2021 Conference [[Slides]](https://docs.google.com/presentation/d/e/2PACX-1vRh8CHEYuZN4drrXuiaoKiZ5Fep9Oqb4Oq0N0vDE2JvT3sa7jXqnMtVM5Giu3DlYWQ47JWWDVArtepf/pub?start=false&loop=false&delayms=3000)

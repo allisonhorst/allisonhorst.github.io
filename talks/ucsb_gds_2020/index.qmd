@@ -1,30 +1,9 @@
 ---
-abstract: An invited talk for UCSB Graduate Students for Diversity in STEM 
-all_day: true
 authors: [Allison Horst]
 date: "2020-11-14"
-# date_end: "2019-11-14"
-event: 
-event_url: 
-featured: false
-# image: 
-#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#   focal_point: Right
-links:
-- icon: slideshare
-  icon_pack: fab
-  name: Slides
-  url: https://docs.google.com/presentation/d/e/2PACX-1vRf4phtJr2uzC3oQKFElV_36uxBjsoYJJXOXJzyIeDBRPW1czyRU9EjfSy8s7ThW3g8RPw5VbxtEnnX/pub?start=false&loop=false&delayms=3000
-# location: Source Themes HQ
-math: true
-# projects:
-# - internal-project
-publishDate: "2020-11-15"
-summary: An invited talk (thank you UCSB Graduate Students for Diversity in STEM!)
-tags: []
 title: Art in Data Science Education
-# url_code: ""
-# url_pdf: ""
-# url_slides: ""
-# url_video: ""
 ---
+
+An invited talk for UCSB Graduate Students for Diversity in STEM
+
+[[Slides]](https://docs.google.com/presentation/d/e/2PACX-1vRf4phtJr2uzC3oQKFElV_36uxBjsoYJJXOXJzyIeDBRPW1czyRU9EjfSy8s7ThW3g8RPw5VbxtEnnX/pub?start=false&loop=false&delayms=3000)

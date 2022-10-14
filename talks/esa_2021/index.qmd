@@ -1,35 +1,9 @@
 ---
-all_day: true
 authors: [Julien Brun and Allison Horst]
 date: "2021-08-02"
-# date_end: "2019-11-14"
-event: Annual Meeting of the Ecological Society of America 2021
-event_url: 
-featured: false
-# image: 
-#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#   focal_point: Right
-links:
-# - icon: twitter
-#   icon_pack: fab
-#   name: Follow
-#   url: https://twitter.com/allison_horst
-# location: Source Themes HQ
-
-- icon: slideshare
-  icon_pack: fab
-  name: Slides
-  url: https://docs.google.com/presentation/d/e/2PACX-1vRHGTKgKf7EVVX95mHgU1SZ8CUnl-bT3viSG47uMZds2f3s7hkzYRP_VCzPgzNnplLhYwHu6gn7I5Mm/pub?start=false&loop=false&delayms=3000
-
-math: true
-# projects:
-# - internal-project
-publishDate: "2021-08-02"
-summary: A regular talk at the 2021 ESA Conference, highlighting our work to make an R package containing one data sample from each site in the US LTER Network.
-tags: []
 title: Leveraging data richness of the Long Term Ecological Research Network for an R datasets package
-# url_code: ""
-# url_website: ""
-# url_slides: ""
-# url_video: ""
 ---
+
+A regular talk at the 2021 ESA Conference, highlighting our work to make an R package containing one data sample from each site in the US LTER Network.
+
+[[Slides]](https://docs.google.com/presentation/d/e/2PACX-1vRHGTKgKf7EVVX95mHgU1SZ8CUnl-bT3viSG47uMZds2f3s7hkzYRP_VCzPgzNnplLhYwHu6gn7I5Mm/pub?start=false&loop=false&delayms=3000)

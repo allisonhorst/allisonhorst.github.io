@@ -1,34 +1,9 @@
 ---
-all_day: true
 authors: [Allison Horst]
 date: "2021-08-09"
-# date_end: "2019-11-14"
-event: Joint Statistical Meetings of the American Statistical Association
-event_url: 
-featured: false
-# image: 
-#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#   focal_point: Right
-links:
-# - icon: twitter
-#   icon_pack: fab
-#   name: Follow
-#   url: https://twitter.com/allison_horst
-# location: Source Themes HQ
-
-- icon: slideshare
-  icon_pack: fab
-  name: Slides
-  url: https://docs.google.com/presentation/d/e/2PACX-1vTWPAhtr7XZo0w2-QuyXpRcBTAS9VDJDseS-7j0LVidVvbL5hQ5lBjWrKUm7_ZIpr-bLo4sP_Im03P0/pub?start=false&loop=false&delayms=3000
-math: true
-# projects:
-# - internal-project
-publishDate: "2021-08-09"
-summary: An invited talk for the Developing and Maintaining Open Source Resources for Statistics and Data Science Education Session, JSM 2021. 
-tags: []
 title: Creative Contributions and Activities for Student Engagement and Learning in Data Science Education
-# url_code: ""
-# url_website: ""
-# url_slides: ""
-# url_video: ""
 ---
+
+An invited talk for the Developing and Maintaining Open Source Resources for Statistics and Data Science Education Session, JSM 2021. 
+
+[[Slides]](https://docs.google.com/presentation/d/e/2PACX-1vTWPAhtr7XZo0w2-QuyXpRcBTAS9VDJDseS-7j0LVidVvbL5hQ5lBjWrKUm7_ZIpr-bLo4sP_Im03P0/pub?start=false&loop=false&delayms=3000)

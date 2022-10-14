@@ -1,42 +1,9 @@
 ---
-all_day: true
-authors: [Allison Horst]
-date: "2022-01-11"
-# date_end: "2019-11-14"
-event: 
-event_url: https://udm2022.org/
-featured_image: fun_rmd.png
-# image: 
-#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#   focal_point: Right
-links:
-# - icon: twitter
-#   icon_pack: fab
-#   name: Follow
-#   url: https://twitter.com/allison_horst
-# location: Source Themes HQ
-
-- icon: book
-  icon_pack: fas
-  name: Workshop guide
-  url: https://allisonhorst.github.io/udm-rmarkdown/
-- icon: slideshare
-  icon_pack: fab
-  name: Slides
-  url: https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000
-- icon: github-square
-  icon_pack: fab
-  name: GitHub
-  url: https://github.com/allisonhorst/udm-rmarkdown/
-math: true
-# projects:
-# - internal-project
-publishDate: "2022-01-11"
 summary: A 1-hour code-along workshop on R Markdown for reproducible data science and reporting for the 2022 Urban Drainage Modeling Conference, hosted by SCCWRP
-tags: []
+date: 2022-01-11
 title: R Markdown for fun, functional and reproducible reporting
-# url_code: ""
-# url_website: ""
-# url_slides: ""
-# url_video: ""
 ---
+
+A 1-hour code-along workshop on R Markdown for reproducible data science and reporting for the 2022 Urban Drainage Modeling Conference, hosted by the Southern California Coastal Watershed Research Program (SCCWRP)
+
+[[Slides]](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000) [[Guide]](https://allisonhorst.github.io/udm-rmarkdown/) [[GitHub]](https://github.com/allisonhorst/udm-rmarkdown/)

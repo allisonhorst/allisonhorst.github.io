@@ -12,10 +12,8 @@ website:
         text: Talks / Workshops
       - href: cv.qmd
         text: CV
-      - href: projects.qmd
-        text: Projects
       - href: posts.qmd
-        text: Blog
+        text: Posts
     right:
       - icon: github
         href: https://github.com/allisonhorst/

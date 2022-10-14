@@ -1,35 +1,9 @@
 ---
-abstract: A 2-hour introduction to getting started with basic plots in ggplot2. 
-all_day: true
 authors: [Allison Horst]
 date: "2018-11-17"
-# date_end: "2019-09-24"
-event: 
-event_url: 
-featured: false
-# image: 
-#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#   focal_point: Right
-links:
-# - icon: twitter
-#   icon_pack: fab
-#   name: Follow
-#   url: https://twitter.com/allison_horst
-# location: Source Themes HQ
-
-- icon: github-square
-  icon_pack: fab
-  name: GitHub
-  url: https://github.com/allisonhorst/data-vis
-math: true
-# projects:
-# - internal-project
-publishDate: "2018-11-17"
-summary: A gentle introduction to building and customizing plots with ggplot2.
-tags: []
 title: Intro to ggplot2 for eco-data-science
-# url_code: ""
-# url_website: ""
-# url_slides: ""
-# url_video: ""
 ---
+
+A gentle 2-hour introduction to building and customizing plots with ggplot2, presented at UCSB Eco-Data-Science.
+
+[[GitHub]](https://github.com/allisonhorst/data-vis)

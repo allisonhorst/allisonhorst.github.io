@@ -1,0 +1,228 @@
+---
+title: "1974...bird attacks?"
+author: "Allison Horst"
+format: html
+execute: 
+  warning: false
+  message: false
+editor: visual
+---
+
+## A-well a bird bird bird...
+
+Why did this post happen? Well, at around 11pm last night I saw [this tweet](https://twitter.com/tcarpenter216/status/1580771753873518593):
+
+\
+[![Twitter post with an image of two tables, together titled "Bird Attacks 1974." The two tables are "Table 1. Bird attacks: body parts injured" and "Table 2. Bird attacks: nature of wounds." The tables contain counts for various injuries and wounds . The data is silly and fake. For example, some of the "wounds" in the dataset include "Cut by stinging remarks" from a bird, and "Feelings hurt" by a bird.](images/paste-68076610.png){width="553"}](https://twitter.com/tcarpenter216/status/1580771753873518593)
+
+Tom's instinct makes perfect sense. My first thought was ["CHICKEN WINGS."](https://www.insider.com/restaurants-pricing-confusing-math-2018-10) So I spent a couple sleepless hours with this weird (and obviously fake) data set about bird attacks in 1974, because it felt like a good October distraction and an opportunity to get some data wrangling rust off.
+
+In this post:
+
+-   Image cropping with magick
+
+```{=html}
+<!-- -->
+```
+-   Optical character recognition (OCR) with tesseract
+
+-   Low elegance, no shame data tidying in R
+
+-   Static & interactive visualizations in JavaScript
+
+fowl, cuckoo, wing, fly, flap, take-off, beak, feather, soar, flock, rail, lark, duck, swallow
+
+## Get the tools and data:
+
+Attach libraries:
+
+```{r}
+library(magick)
+library(tesseract)
+library(tidyverse)
+library(patchwork)
+library(kableExtra)
+```
+
+Read in and crop the image with magick:
+
+```{r}
+birds_img <- image_read("bird_attacks_tweet.jpg")
+birds <- image_crop(birds_img, "1100x1100+50+200")
+```
+
+Here's the cropped version of the image:
+
+```{r, fig.alt="Cropped version of the bird attacks image, now containing only the tables and title."}
+#| echo: false
+birds
+```
+
+## Optical character recognition 
+
+Optical character recognition (OCR), or text recognition, lets you extract text information from images (e.g. non-selectable PDFs, JPEGs, PNGs, etc.). The [tesseract package](https://cran.r-project.org/web/packages/tesseract/vignettes/intro.html) in R "provides R bindings to [Tesseract](https://github.com/tesseract-ocr/tesseract): a
+powerful optical character recognition (OCR) engine that supports over 100 languages."
+
+Create the engine, then OCR those birds:
+
+```{r}
+ocr_eng <- tesseract("eng")
+text <- tesseract::ocr(birds, engine = ocr_eng)
+```
+
+Take a look at the extracted text. I will never stop thinking this is amazing.
+
+```{r}
+cat(text)
+```
+
+## Cleaning
+
+Here's my "no regerts" code for data cleaning. I would love to see other ways that people wrangle these birds.
+
+```{r}
+# Separating into columns
+bird_dat <- data.frame(text) |> 
+  mutate(text = strsplit(as.character(text), "\n")) |>  
+    unnest(text) |> 
+  filter(text != "") |>
+  slice(-c(1:2)) |> 
+  separate(col = "text" , 
+           into = c("body_parts", "leftover"), 
+           sep = "(?<=[a-zA-Z])\\s*(?=[0-9])",
+           extra = "merge") |> 
+  separate(col = "leftover",
+           into = c("body_parts_count", "leftover"),
+           sep = " ",
+           extra = "merge") |> 
+  separate(col = "leftover" , 
+           into = c("nature_of_wounds", "nature_of_wounds_counts"), 
+           sep = "(?<=[a-zA-Z])\\s*(?=[0-9])",
+           extra = "merge") |> 
+  slice(-1)
+
+# Some artisanal hacking. Not proud, but tired... 
+bird_dat$nature_of_wounds[16] <- "Body not recovered"
+bird_dat$nature_of_wounds_counts[16] <- bird_dat$body_parts_count[16]
+bird_dat$body_parts[16] <- NA
+bird_dat$body_parts_count[16] <- NA
+
+# At this point, splitting into separate data frames:
+body_parts_injured <- data.frame(body_parts = bird_dat$body_parts, n = bird_dat$body_parts_count) |> 
+  drop_na()
+
+wounds <- data.frame(wound_nature = bird_dat$nature_of_wounds, 
+                     n = bird_dat$nature_of_wounds_counts)
+
+# Where nature_of_wounds_counts is NA, combine text w/ following row.
+# No, this does not follow any cohesive data cleaning philosophy.
+for (i in 1:(length(wounds$n) - 1)) {
+  if (is.na(wounds$n[i])) {
+    wounds$wound_nature[i+1] <- paste(wounds$wound_nature[i], wounds$wound_nature[i+1])
+    }
+}
+
+# Then get rid of the duplicate text rows still containing NA
+wounds <- wounds |> 
+  drop_na() |> 
+  mutate(n = as.numeric(n))
+
+```
+
+Which gives us these two data frames:
+
+```{r}
+#| layout-ncol: 2
+#| echo: false
+
+body_parts_injured |> 
+  kable() |> 
+  kable_styling(bootstrap_options = "striped", full_width = FALSE)
+
+wounds |> 
+  kable() |> 
+  kable_styling(bootstrap_options = "striped", full_width = FALSE)
+
+```
+
+## Viz those birds
+
+I'm going to do some JavaScript data visualization in OJS cells, which I can do [right in this Quarto doc](https://quarto.org/docs/interactive/ojs/ojs-cells.html) 🤯 Curious about adding more JavaScript to your Quarto world? I highly recommend [Sharon Machlis](https://twitter.com/sharon000)' recent series, [*A beginner's guide to using Observable JavaScript, R, and Python with Quarto*](https://www.infoworld.com/article/3674789/a-beginners-guide-to-using-observable-javascript-r-and-python-with-quarto.html).
+
+First, I'll make my R objects available for use in OJS cells:
+
+```{r}
+ojs_define(wounds = wounds)
+ojs_define(body_parts_injured = body_parts_injured)
+```
+
+At this point, I switch over to OJS cells -- code fencing is shown for OJS cells below to clarify the switch from R. First step, transposing the data - which still hurts my column-loving heart a bit, but I'm getting used to it.
+
+```{ojs}
+//| echo: fenced
+wounds_transpose = transpose(wounds)
+injuries_transpose = transpose(body_parts_injured)
+```
+
+Then some JavaScript visualizations.
+
+Here, a bar chart created with [Observable Plot](https://observablehq.com/@observablehq/plot). If you're used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar.
+
+```{ojs}
+//| echo: fenced
+Plot.plot({
+  marks: [
+    Plot.barX(wounds_transpose, 
+    {y: "wound_nature", x: "n", 
+    sort: {y: "x", reverse: true},
+    fill: "navy"
+    })
+  ], 
+  marginLeft: 200, 
+  x: {label: "Number"},
+  y: {label: "Type of injury from bird attack"}
+})
+```
+
+We know this data is questionable because clearly the two most common bird wounds are "Cut by stinging remarks" and "Feelings hurt." I suspect this may be due to social desirability bias. Further research is needed.
+
+You know what viz I really need (read: I really don't, but keep reading because this is cool anyway)? A D3 [bubble chart](https://observablehq.com/@d3/bubble-chart) of those wounds, with circle area proportional to counts. Instead of building this from scratch, I'm going to use [Observable imports](https://observablehq.com/@observablehq/import) to have it (or any other named thing in a published Observable notebook) at-my-fingertips. Again, this feels like a bit of magic.
+
+```{ojs}
+//| echo: fenced
+import {BubbleChart} from "@d3/bubble-chart"
+```
+
+Now, the D3 BubbleChart function is available for me to usehere. Right in my Quarto doc. I'm clapping.
+
+```{ojs}
+//| echo: fenced
+BubbleChart(wounds_transpose, 
+            {label: (d) => `${d.wound_nature}\n\n${d.n}`,
+            value: d => d.n,
+            group: d => d.n,
+            title: (d) => `${d.wound_nature}\n\n${d.n}`
+            })
+```
+
+I refuse to leave this without some visualization of the "body parts injured" data. Let's make a (spin the wheel) [D3 DONUT CHART](https://observablehq.com/@d3/donut-chart)!
+
+Again, I import from th Observable Notebook (notice the slug is \\@d3/donut-chart, and the named function is DonutChart):
+
+```{ojs}
+import {DonutChart} from "@d3/donut-chart"
+```
+
+With the `DonutChart` function now available for me to use here, I can make my plot:
+
+```{ojs}
+
+DonutChart(injuries_transpose, {
+  name: d => d.body_parts,
+  value: d => d.n,
+  width,
+  height: 500
+})
+```
+
+In the spirit of publicly sharing works-in-progress and imperfect things, I'll stop here. I look forward to seeing other ways that people wrangle & visualize data from the 1974 bird attack epidemic. Stay safe out there, friends.

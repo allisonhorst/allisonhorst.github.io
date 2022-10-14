@@ -1,35 +1,9 @@
 ---
-all_day: true
 authors: [Allison Horst]
 date: "2022-02-02"
-# date_end: "2019-11-14"
-event: NCEAS Roundtable
-event_url: 
-featured: false
-# image: 
-#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#   focal_point: Right
-links:
-# - icon: twitter
-#   icon_pack: fab
-#   name: Follow
-#   url: https://twitter.com/allison_horst
-# location: Source Themes HQ
-
-- icon: slideshare
-  icon_pack: fab
-  name: Slides
-  url: https://docs.google.com/presentation/d/e/2PACX-1vQY5mae7PZrRJnYIeZVELx-zzSleJoNgQrw7feFqcnJ5dWAhrzTHcesgICC22RrclSE1rEQ8rHOC3AK/pub?start=false&loop=false&delayms=3000
-
-math: true
-# projects:
-# - internal-project
-publishDate: "2022-01-11"
-summary: Invited talk for NCEAS Roundtable. Art can provide a welcoming entryway for learners to engage with sometimes intimidating coding skills. In the first half of this session, I will describe the rise of the R monsters (illustrated characters that I create to help make data science and stats concepts and tools more approachable), my experiences as NCEAS' and RStudio's Artist-in-Residence, and a few unexpected lessons I've learned from the monsters along the way. In the second half of the session, all attendees will be invited to join in an art lesson during which everyone will follow along to create a charismatic collection of monsters of your own. Art materials will be provided for all in-person attendees. For attendees joining remotely, you will need 1 - 2 sheets of paper, a light colored pencil or crayon, and a black colored pencil or fine-tip marker.
-tags: []
 title: Making monsters - Where they came from, what they’ve taught me, and how you can make them, too
-# url_code: ""
-# url_website: ""
-# url_slides: ""
-# url_video: ""
 ---
+
+Invited talk for NCEAS Roundtable. Art can provide a welcoming entryway for learners to engage with sometimes intimidating coding skills. In the first half of this session, I will describe the rise of the R monsters (illustrated characters that I create to help make data science and stats concepts and tools more approachable), my experiences as NCEAS' and RStudio's Artist-in-Residence, and a few unexpected lessons I've learned from the monsters along the way. In the second half of the session, all attendees will be invited to join in an art lesson during which everyone will follow along to create a charismatic collection of monsters of your own.
+
+[[Slides]](https://docs.google.com/presentation/d/e/2PACX-1vQY5mae7PZrRJnYIeZVELx-zzSleJoNgQrw7feFqcnJ5dWAhrzTHcesgICC22RrclSE1rEQ8rHOC3AK/pub?start=false&loop=false&delayms=3000)

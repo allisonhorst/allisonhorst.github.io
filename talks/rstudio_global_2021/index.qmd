@@ -1,34 +1,9 @@
 ---
-abstract: Motivation and lessons learned from my time as RStudio's first artist-in-residence. 
-all_day: true
 authors: [Allison Horst]
 date: "2021-01-24"
-# date_end: "2019-11-14"
-event: 
-event_url: 
-featured: false
-# image: 
-#   caption: 'Image credit: # [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#   focal_point: Right
-links:
-- icon: slideshare
-  icon_pack: fab
-  name: Slides
-  url: https://docs.google.com/presentation/d/e/2PACX-1vSUhCl0kXyxRdX6fv24SwloIOaL9LH6oRD-g0tU7Ee9NDSWZt0ozixnKdcSxuEhzB7tbRBkBZzcNROx/pub?start=false&loop=false&delayms=3000
-- icon: video-camera
-  icon_pack: fa
-  name: Video
-  url: https://rstudio.com/resources/rstudioglobal-2021/art-lessons-one-year-as-rstudios-artist-in-residence/
-location: rstudio::global(2021)
-math: true
-# projects:
-# - internal-project
-publishDate: "2021-01-24"
-summary: 
-tags: []
 title: Art lessons - A year as RStudio's Artist-in-Residence
-# url_code: ""
-# url_pdf: ""
-# url_slides: ""
-# url_video: ""
 ---
+
+My rstudio::conf2021 on motivation and lessons learned from my time as RStudio's first artist-in-residence. 
+
+[[Slides]](https://docs.google.com/presentation/d/e/2PACX-1vSUhCl0kXyxRdX6fv24SwloIOaL9LH6oRD-g0tU7Ee9NDSWZt0ozixnKdcSxuEhzB7tbRBkBZzcNROx/pub?start=false&loop=false&delayms=3000) [[Video]](https://rstudio.com/resources/rstudioglobal-2021/art-lessons-one-year-as-rstudios-artist-in-residence/)
