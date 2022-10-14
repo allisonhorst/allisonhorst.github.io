@@ -244,7 +244,3 @@ DonutChart(injuries_transpose, {
 ```
 
 In the spirit of publicly sharing works-in-progress and imperfect things, I'll stop here. I look forward to seeing other ways that people wrangle & visualize data from the 1974 bird attack epidemic. Stay safe out there, friends.
-
-```{ojs}
-JSON.stringify(wounds)
-```
