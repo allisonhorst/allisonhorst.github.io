@@ -6,7 +6,6 @@ execute:
   warning: false
   message: false
 editor: visual
-draft: true
 ---
 
 ## A-well a bird bird bird...

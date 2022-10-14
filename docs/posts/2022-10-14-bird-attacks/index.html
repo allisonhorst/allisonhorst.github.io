@@ -508,11 +508,11 @@ Genitals 834 presumed so 16
 </div>
 <p>At this point, I switch over to OJS cells – code fencing is shown for OJS cells below to clarify the switch from R. First step, I’ll make transposed versions of the data frames:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-startfrom="157" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 156;"><span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
-<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a>wounds_transpose <span class="op">=</span> <span class="fu">transpose</span><span class="op">(</span>wounds<span class="op">)</span></span>
-<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>injuries_transpose <span class="op">=</span> <span class="fu">transpose</span><span class="op">(</span>body_parts_injured<span class="op">)</span></span>
-<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8" data-startfrom="156" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 155;"><span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
+<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>wounds_transpose <span class="op">=</span> <span class="fu">transpose</span><span class="op">(</span>wounds<span class="op">)</span></span>
+<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a>injuries_transpose <span class="op">=</span> <span class="fu">transpose</span><span class="op">(</span>body_parts_injured<span class="op">)</span></span>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -532,22 +532,22 @@ Genitals 834 presumed so 16
 <p>Here, a bar chart created with <a href="https://observablehq.com/@observablehq/plot">Observable Plot</a>. If you’re used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar.</p>
 <p>Plot accepts columnar (untransposed) data (thanks <a href="https://twitter.com/recifs">Fil</a>!), as shown below. Notice that the first argument provided to <code>Plot.barX()</code> is <code>wounds.n</code>. <em>Why not just <code>wounds</code>?</em> Here, we need to provide an argument that has the <em>correct length</em>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-startfrom="169" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 168;"><span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
-<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span><span class="op">({</span></span>
-<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a>    marks<span class="op">:</span> <span class="op">[</span></span>
-<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">barX</span><span class="op">(</span>wounds<span class="op">.</span><span class="fu">n</span><span class="op">,</span> </span>
-<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a>                     <span class="op">{</span>y<span class="op">:</span> wounds<span class="op">.</span><span class="fu">wound_nature</span><span class="op">,</span> x<span class="op">:</span> wounds<span class="op">.</span><span class="fu">n</span><span class="op">,</span></span>
-<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a>                     sort<span class="op">:</span> <span class="op">{</span>y<span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> reverse<span class="op">:</span> <span class="kw">true</span><span class="op">},</span></span>
-<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a>                     fill<span class="op">:</span> <span class="st">"navy"</span><span class="op">}</span></span>
-<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a>                     <span class="op">)</span></span>
-<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a>           <span class="op">],</span></span>
-<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a>    marginLeft<span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a>    x<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Number"</span><span class="op">},</span></span>
-<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a>    y<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Type of injury from bird attack"</span><span class="op">}</span></span>
-<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a>  <span class="op">})</span></span>
-<span id="cb9-184"><a href="#cb9-184" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9" data-startfrom="168" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 167;"><span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
+<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
+<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span><span class="op">({</span></span>
+<span id="cb9-172"><a href="#cb9-172" aria-hidden="true" tabindex="-1"></a>    marks<span class="op">:</span> <span class="op">[</span></span>
+<span id="cb9-173"><a href="#cb9-173" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">barX</span><span class="op">(</span>wounds<span class="op">.</span><span class="fu">n</span><span class="op">,</span> </span>
+<span id="cb9-174"><a href="#cb9-174" aria-hidden="true" tabindex="-1"></a>                     <span class="op">{</span>y<span class="op">:</span> wounds<span class="op">.</span><span class="fu">wound_nature</span><span class="op">,</span> x<span class="op">:</span> wounds<span class="op">.</span><span class="fu">n</span><span class="op">,</span></span>
+<span id="cb9-175"><a href="#cb9-175" aria-hidden="true" tabindex="-1"></a>                     sort<span class="op">:</span> <span class="op">{</span>y<span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> reverse<span class="op">:</span> <span class="kw">true</span><span class="op">},</span></span>
+<span id="cb9-176"><a href="#cb9-176" aria-hidden="true" tabindex="-1"></a>                     fill<span class="op">:</span> <span class="st">"navy"</span><span class="op">}</span></span>
+<span id="cb9-177"><a href="#cb9-177" aria-hidden="true" tabindex="-1"></a>                     <span class="op">)</span></span>
+<span id="cb9-178"><a href="#cb9-178" aria-hidden="true" tabindex="-1"></a>           <span class="op">],</span></span>
+<span id="cb9-179"><a href="#cb9-179" aria-hidden="true" tabindex="-1"></a>    marginLeft<span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb9-180"><a href="#cb9-180" aria-hidden="true" tabindex="-1"></a>    x<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Number"</span><span class="op">},</span></span>
+<span id="cb9-181"><a href="#cb9-181" aria-hidden="true" tabindex="-1"></a>    y<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Type of injury from bird attack"</span><span class="op">}</span></span>
+<span id="cb9-182"><a href="#cb9-182" aria-hidden="true" tabindex="-1"></a>  <span class="op">})</span></span>
+<span id="cb9-183"><a href="#cb9-183" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -556,21 +556,21 @@ Genitals 834 presumed so 16
 </div>
 <p>Alternatively, we can pass our transposed data into Plot to make the same thing. This works just fine here, with a small data set. Once the number of rows gets very large, you may want to avoid transposition, and can use the “direct from columns” method above.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-startfrom="187" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 186;"><span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
-<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span><span class="op">({</span></span>
-<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a>  marks<span class="op">:</span> <span class="op">[</span></span>
-<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barX</span><span class="op">(</span>wounds_transpose<span class="op">,</span> </span>
-<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span>y<span class="op">:</span> <span class="st">"wound_nature"</span><span class="op">,</span> x<span class="op">:</span> <span class="st">"n"</span><span class="op">,</span> </span>
-<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>    sort<span class="op">:</span> <span class="op">{</span>y<span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> reverse<span class="op">:</span> <span class="kw">true</span><span class="op">},</span></span>
-<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>    fill<span class="op">:</span> <span class="st">"navy"</span></span>
-<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
-<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>  <span class="op">],</span> </span>
-<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a>  marginLeft<span class="op">:</span> <span class="dv">200</span><span class="op">,</span> </span>
-<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a>  x<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Number"</span><span class="op">},</span></span>
-<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a>  y<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Type of injury from bird attack"</span><span class="op">}</span></span>
-<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span>
-<span id="cb10-201"><a href="#cb10-201" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10" data-startfrom="186" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 185;"><span id="cb10-186"><a href="#cb10-186" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
+<span id="cb10-187"><a href="#cb10-187" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
+<span id="cb10-188"><a href="#cb10-188" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span><span class="op">({</span></span>
+<span id="cb10-189"><a href="#cb10-189" aria-hidden="true" tabindex="-1"></a>  marks<span class="op">:</span> <span class="op">[</span></span>
+<span id="cb10-190"><a href="#cb10-190" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barX</span><span class="op">(</span>wounds_transpose<span class="op">,</span> </span>
+<span id="cb10-191"><a href="#cb10-191" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span>y<span class="op">:</span> <span class="st">"wound_nature"</span><span class="op">,</span> x<span class="op">:</span> <span class="st">"n"</span><span class="op">,</span> </span>
+<span id="cb10-192"><a href="#cb10-192" aria-hidden="true" tabindex="-1"></a>    sort<span class="op">:</span> <span class="op">{</span>y<span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> reverse<span class="op">:</span> <span class="kw">true</span><span class="op">},</span></span>
+<span id="cb10-193"><a href="#cb10-193" aria-hidden="true" tabindex="-1"></a>    fill<span class="op">:</span> <span class="st">"navy"</span></span>
+<span id="cb10-194"><a href="#cb10-194" aria-hidden="true" tabindex="-1"></a>    <span class="op">})</span></span>
+<span id="cb10-195"><a href="#cb10-195" aria-hidden="true" tabindex="-1"></a>  <span class="op">],</span> </span>
+<span id="cb10-196"><a href="#cb10-196" aria-hidden="true" tabindex="-1"></a>  marginLeft<span class="op">:</span> <span class="dv">200</span><span class="op">,</span> </span>
+<span id="cb10-197"><a href="#cb10-197" aria-hidden="true" tabindex="-1"></a>  x<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Number"</span><span class="op">},</span></span>
+<span id="cb10-198"><a href="#cb10-198" aria-hidden="true" tabindex="-1"></a>  y<span class="op">:</span> <span class="op">{</span>label<span class="op">:</span> <span class="st">"Type of injury from bird attack"</span><span class="op">}</span></span>
+<span id="cb10-199"><a href="#cb10-199" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span>
+<span id="cb10-200"><a href="#cb10-200" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="expression">
 
@@ -580,10 +580,10 @@ Genitals 834 presumed so 16
 <p>We know this data is questionable because clearly the two most common bird wounds are “Cut by stinging remarks” and “Feelings hurt.” I suspect this may be due to social desirability bias. Further research is needed.</p>
 <p>You know what viz I really need (read: I really don’t, but keep reading because this is cool anyway)? A D3 <a href="https://observablehq.com/@d3/bubble-chart">bubble chart</a> of those wounds, with circle area proportional to counts. Instead of building this from scratch, I’m going to use <a href="https://observablehq.com/@observablehq/import">Observable imports</a> to have it (or any other named thing in a published Observable notebook) at-my-fingertips. Again, this feels like a bit of magic.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11" data-startfrom="210" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 209;"><span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
-<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">{BubbleChart} from "@d3/bubble-chart"</span></span>
-<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11" data-startfrom="209" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 208;"><span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
+<span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
+<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> <span class="im">{BubbleChart} from "@d3/bubble-chart"</span></span>
+<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="declaration">
 
@@ -592,15 +592,15 @@ Genitals 834 presumed so 16
 </div>
 <p>Now, the D3 BubbleChart function is available for me to usehere. Right in my Quarto doc. I’m clapping.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12" data-startfrom="217" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 216;"><span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
-<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a><span class="fu">BubbleChart</span><span class="op">(</span>wounds_transpose<span class="op">,</span> </span>
-<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span>label<span class="op">:</span> <span class="op">(</span>d<span class="op">)</span> <span class="op">=&gt;</span> `$<span class="op">{</span>d<span class="op">.</span><span class="fu">wound_nature</span><span class="op">}</span>\n\n$<span class="op">{</span>d<span class="op">.</span><span class="fu">n</span><span class="op">}</span>`<span class="op">,</span></span>
-<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>            value<span class="op">:</span> d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">n</span><span class="op">,</span></span>
-<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>            group<span class="op">:</span> d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">n</span><span class="op">,</span></span>
-<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>            title<span class="op">:</span> <span class="op">(</span>d<span class="op">)</span> <span class="op">=&gt;</span> `$<span class="op">{</span>d<span class="op">.</span><span class="fu">wound_nature</span><span class="op">}</span>\n\n$<span class="op">{</span>d<span class="op">.</span><span class="fu">n</span><span class="op">}</span>`</span>
-<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a>            <span class="op">})</span></span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12" data-startfrom="216" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 215;"><span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
+<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
+<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a><span class="fu">BubbleChart</span><span class="op">(</span>wounds_transpose<span class="op">,</span> </span>
+<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a>            <span class="op">{</span>label<span class="op">:</span> <span class="op">(</span>d<span class="op">)</span> <span class="op">=&gt;</span> `$<span class="op">{</span>d<span class="op">.</span><span class="fu">wound_nature</span><span class="op">}</span>\n\n$<span class="op">{</span>d<span class="op">.</span><span class="fu">n</span><span class="op">}</span>`<span class="op">,</span></span>
+<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a>            value<span class="op">:</span> d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">n</span><span class="op">,</span></span>
+<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>            group<span class="op">:</span> d <span class="op">=&gt;</span> d<span class="op">.</span><span class="fu">n</span><span class="op">,</span></span>
+<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>            title<span class="op">:</span> <span class="op">(</span>d<span class="op">)</span> <span class="op">=&gt;</span> `$<span class="op">{</span>d<span class="op">.</span><span class="fu">wound_nature</span><span class="op">}</span>\n\n$<span class="op">{</span>d<span class="op">.</span><span class="fu">n</span><span class="op">}</span>`</span>
+<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>            <span class="op">})</span></span>
+<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="expression">
 
@@ -610,7 +610,7 @@ Genitals 834 presumed so 16
 <p>I refuse to leave this without some visualization of the “body parts injured” data. Let’s make a (spin the wheel) <a href="https://observablehq.com/@d3/donut-chart">D3 DONUT CHART</a>!</p>
 <p>Again, I import from th Observable Notebook (notice the slug is @d3/donut-chart, and the named function is DonutChart):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" data-startfrom="231" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 230;"><span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {DonutChart} <span class="im">from</span> <span class="st">"@d3/donut-chart"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13" data-startfrom="230" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 229;"><span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {DonutChart} <span class="im">from</span> <span class="st">"@d3/donut-chart"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="declaration">
 
@@ -619,12 +619,12 @@ Genitals 834 presumed so 16
 </div>
 <p>With the <code>DonutChart</code> function now available for me to use here, I can make my plot:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14" data-startfrom="237" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 236;"><span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a><span class="fu">DonutChart</span>(injuries_transpose<span class="op">,</span> {</span>
-<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a>  <span class="dt">name</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">body_parts</span><span class="op">,</span></span>
-<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">n</span><span class="op">,</span></span>
-<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span></span>
-<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span></span>
-<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14" data-startfrom="236" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 235;"><span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a><span class="fu">DonutChart</span>(injuries_transpose<span class="op">,</span> {</span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a>  <span class="dt">name</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">body_parts</span><span class="op">,</span></span>
+<span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">n</span><span class="op">,</span></span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a>  width<span class="op">,</span></span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">500</span></span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="expression">
 
@@ -633,7 +633,7 @@ Genitals 834 presumed so 16
 </div>
 <p>In the spirit of publicly sharing works-in-progress and imperfect things, I’ll stop here. I look forward to seeing other ways that people wrangle &amp; visualize data from the 1974 bird attack epidemic. Stay safe out there, friends.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15" data-startfrom="249" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 248;"><span id="cb15-249"><a href="#cb15-249" aria-hidden="true" tabindex="-1"></a><span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(wounds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15" data-startfrom="248" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 247;"><span id="cb15-248"><a href="#cb15-248" aria-hidden="true" tabindex="-1"></a><span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(wounds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="expression">
 
