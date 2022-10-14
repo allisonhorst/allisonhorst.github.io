@@ -149,7 +149,7 @@ ojs_define(wounds = wounds)
 ojs_define(body_parts_injured = body_parts_injured)
 ```
 
-At this point, I switch over to OJS cells -- code fencing is shown for OJS cells below to clarify the switch from R. First step, transposing the data - which still hurts my column-loving heart a bit, but I'm getting used to it.
+At this point, I switch over to OJS cells -- code fencing is shown for OJS cells below to clarify the switch from R. First step, I'll make transposed versions of the data frames:
 
 ```{ojs}
 //| echo: fenced
@@ -159,7 +159,7 @@ injuries_transpose = transpose(body_parts_injured)
 
 Then some JavaScript visualizations.
 
-Here, a bar chart created with [Observable Plot](https://observablehq.com/@observablehq/plot). If you're used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar.
+Here, a bar chart created with [Observable Plot](https://observablehq.com/@observablehq/plot). If you're used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar. Note: Plot also accepts columnar (untransposed) data (thanks Fil!) -- I'll add an example here in a bit.
 
 ```{ojs}
 //| echo: fenced

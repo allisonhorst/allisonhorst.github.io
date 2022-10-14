@@ -505,7 +505,7 @@ Genitals 834 presumed so 16
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ojs_define</span>(<span class="at">wounds =</span> wounds)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ojs_define</span>(<span class="at">body_parts_injured =</span> body_parts_injured)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>At this point, I switch over to OJS cells – code fencing is shown for OJS cells below to clarify the switch from R. First step, transposing the data - which still hurts my column-loving heart a bit, but I’m getting used to it.</p>
+<p>At this point, I switch over to OJS cells – code fencing is shown for OJS cells below to clarify the switch from R. First step, I’ll make transposed versions of the data frames:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8" data-startfrom="154" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 153;"><span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
 <span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
@@ -528,7 +528,7 @@ Genitals 834 presumed so 16
 </div>
 </div>
 <p>Then some JavaScript visualizations.</p>
-<p>Here, a bar chart created with <a href="https://observablehq.com/@observablehq/plot">Observable Plot</a>. If you’re used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar.</p>
+<p>Here, a bar chart created with <a href="https://observablehq.com/@observablehq/plot">Observable Plot</a>. If you’re used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar. Note: Plot also accepts columnar (untransposed) data (thanks Fil!) – I’ll add an example here in a bit.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9" data-startfrom="164" data-source-offset="9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 163;"><span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
 <span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: fenced</span></span>
