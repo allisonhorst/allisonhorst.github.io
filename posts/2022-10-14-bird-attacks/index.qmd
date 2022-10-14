@@ -6,6 +6,7 @@ execute:
   warning: false
   message: false
 editor: visual
+draft: true
 ---
 
 ## A-well a bird bird bird...
@@ -142,6 +143,8 @@ wounds |>
 
 I'm going to do some JavaScript data visualization in OJS cells, which I can do [right in this Quarto doc](https://quarto.org/docs/interactive/ojs/ojs-cells.html) 🤯 Curious about adding more JavaScript to your Quarto world? I highly recommend [Sharon Machlis](https://twitter.com/sharon000)' recent series, [*A beginner's guide to using Observable JavaScript, R, and Python with Quarto*](https://www.infoworld.com/article/3674789/a-beginners-guide-to-using-observable-javascript-r-and-python-with-quarto.html).
 
+Keep in mind that you can't interactively execute JavaScript in RStudio, so building visualizations in [Observable](https://observablehq.com/) is a great option.
+
 First, I'll make my R objects available for use in OJS cells:
 
 ```{r}
@@ -159,8 +162,28 @@ injuries_transpose = transpose(body_parts_injured)
 
 Then some JavaScript visualizations.
 
-Here, a bar chart created with [Observable Plot](https://observablehq.com/@observablehq/plot). If you're used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar. Note: Plot also accepts columnar (untransposed) data (thanks Fil!) -- I'll add an example here in a bit.
+Here, a bar chart created with [Observable Plot](https://observablehq.com/@observablehq/plot). If you're used to working in ggplot2, building visualizations following the grammar of graphics in Plot feels similar. 
 
+Plot accepts columnar (untransposed) data (thanks [Fil](https://twitter.com/recifs)!), as shown below. Notice that the first argument provided to `Plot.barX()` is `wounds.n`. *Why not just `wounds`?* Here, we need to provide an argument that has the *correct length*.
+
+```{ojs}
+//| echo: fenced
+
+Plot.plot({
+    marks: [
+            Plot.barX(wounds.n, 
+                     {y: wounds.wound_nature, x: wounds.n,
+                     sort: {y: "x", reverse: true},
+                     fill: "navy"}
+                     )
+           ],
+    marginLeft: 200,
+    x: {label: "Number"},
+    y: {label: "Type of injury from bird attack"}
+  })
+```
+
+Alternatively, we can pass our transposed data into Plot to make the same thing. This works just fine here, with a small data set. Once the number of rows gets very large, you may want to avoid transposition, and can use the "direct from columns" method above.
 ```{ojs}
 //| echo: fenced
 Plot.plot({
@@ -176,6 +199,9 @@ Plot.plot({
   y: {label: "Type of injury from bird attack"}
 })
 ```
+
+
+
 
 We know this data is questionable because clearly the two most common bird wounds are "Cut by stinging remarks" and "Feelings hurt." I suspect this may be due to social desirability bias. Further research is needed.
 
@@ -200,7 +226,7 @@ BubbleChart(wounds_transpose,
 
 I refuse to leave this without some visualization of the "body parts injured" data. Let's make a (spin the wheel) [D3 DONUT CHART](https://observablehq.com/@d3/donut-chart)!
 
-Again, I import from th Observable Notebook (notice the slug is \\@d3/donut-chart, and the named function is DonutChart):
+Again, I import from th Observable Notebook (notice the slug is \@d3/donut-chart, and the named function is DonutChart):
 
 ```{ojs}
 import {DonutChart} from "@d3/donut-chart"
@@ -219,3 +245,7 @@ DonutChart(injuries_transpose, {
 ```
 
 In the spirit of publicly sharing works-in-progress and imperfect things, I'll stop here. I look forward to seeing other ways that people wrangle & visualize data from the 1974 bird attack epidemic. Stay safe out there, friends.
+
+```{ojs}
+JSON.stringify(wounds)
+```
