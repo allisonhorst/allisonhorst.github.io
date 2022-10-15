@@ -26,6 +26,3 @@ format:
     theme: styles.scss
     mainfont: 'Bellota Text'
     toc: true
-
-
-

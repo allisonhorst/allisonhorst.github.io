@@ -1,6 +1,7 @@
 ---
 title: "1974...bird attacks?"
 author: "Allison Horst"
+date: "2022-10-14"
 format: html
 execute: 
   warning: false
@@ -140,9 +141,9 @@ wounds |>
 
 ## Viz those birds
 
-I'm going to do some JavaScript data visualization in OJS cells, which I can do [right in this Quarto doc](https://quarto.org/docs/interactive/ojs/ojs-cells.html) 🤯 Curious about adding more JavaScript to your Quarto world? I highly recommend [Sharon Machlis](https://twitter.com/sharon000)' recent series, [*A beginner's guide to using Observable JavaScript, R, and Python with Quarto*](https://www.infoworld.com/article/3674789/a-beginners-guide-to-using-observable-javascript-r-and-python-with-quarto.html).
+I'm going to add JavaScript code for data visualization in OJS cells [right in this Quarto doc](https://quarto.org/docs/interactive/ojs/ojs-cells.html). Curious about adding more JavaScript to your Quarto world? I highly recommend [Sharon Machlis](https://twitter.com/sharon000)' recent series, [*A beginner's guide to using Observable JavaScript, R, and Python with Quarto*](https://www.infoworld.com/article/3674789/a-beginners-guide-to-using-observable-javascript-r-and-python-with-quarto.html).
 
-Keep in mind that you can't interactively execute JavaScript in RStudio, so building visualizations in [Observable](https://observablehq.com/) is a great option.
+Keep in mind that you can't interactively execute JavaScript in RStudio -- the output and any errors are only be returned upon rendering.So for any substantial viz building and prototyping in JavaScript, [Observable](https://observablehq.com/) is the place.
 
 First, I'll make my R objects available for use in OJS cells:
 
@@ -199,19 +200,16 @@ Plot.plot({
 })
 ```
 
-
-
-
 We know this data is questionable because clearly the two most common bird wounds are "Cut by stinging remarks" and "Feelings hurt." I suspect this may be due to social desirability bias. Further research is needed.
 
-You know what viz I really need (read: I really don't, but keep reading because this is cool anyway)? A D3 [bubble chart](https://observablehq.com/@d3/bubble-chart) of those wounds, with circle area proportional to counts. Instead of building this from scratch, I'm going to use [Observable imports](https://observablehq.com/@observablehq/import) to have it (or any other named thing in a published Observable notebook) at-my-fingertips. Again, this feels like a bit of magic.
+First, let's make a D3 [bubble chart](https://observablehq.com/@d3/bubble-chart) of those wounds, with circle area proportional to counts. Instead of building this from scratch, I'm going to use [Observable imports](https://observablehq.com/@observablehq/import) to have it (or any other named thing in a published Observable notebook) at-my-fingertips. Again, this feels like a bit of magic.
 
 ```{ojs}
 //| echo: fenced
 import {BubbleChart} from "@d3/bubble-chart"
 ```
 
-Now, the D3 BubbleChart function is available for me to usehere. Right in my Quarto doc. I'm clapping.
+Now, the D3 BubbleChart function is available for me to use. 
 
 ```{ojs}
 //| echo: fenced
@@ -225,7 +223,7 @@ BubbleChart(wounds_transpose,
 
 I refuse to leave this without some visualization of the "body parts injured" data. Let's make a (spin the wheel) [D3 DONUT CHART](https://observablehq.com/@d3/donut-chart)!
 
-Again, I import from th Observable Notebook (notice the slug is \@d3/donut-chart, and the named function is DonutChart):
+Again, I import from the Observable Notebook (notice the slug is \@d3/donut-chart, and the named function is DonutChart):
 
 ```{ojs}
 import {DonutChart} from "@d3/donut-chart"
@@ -244,3 +242,10 @@ DonutChart(injuries_transpose, {
 ```
 
 In the spirit of publicly sharing works-in-progress and imperfect things, I'll stop here. I look forward to seeing other ways that people wrangle & visualize data from the 1974 bird attack epidemic. Stay safe out there, friends.
+
+Learn more: 
+
+- [Observable](https://observablehq.com/) 
+- [OJS cells in Quarto](https://quarto.org/docs/interactive/ojs/)
+- [Use the tesseract engine](https://cran.r-project.org/web/packages/tesseract/vignettes/intro.html) for optical character recognition in R
+- [magick](https://cran.r-project.org/web/packages/magick/vignettes/intro.html) for image manipulation
