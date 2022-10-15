@@ -2,7 +2,7 @@
 title: "Allison Horst"
 about:
   template: trestles
-  image: horst_pic.jpeg
+  image: allison-teddy-pic.jpg
   links:
     - icon: twitter
       text: twitter
