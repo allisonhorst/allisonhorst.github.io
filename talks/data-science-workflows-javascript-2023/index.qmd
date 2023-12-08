@@ -1,0 +1,9 @@
+---
+authors: [Allison Horst]
+date: "2023-07-01"
+title: Data science workflows in JavaScript
+---
+
+A 3-part workshop series on gaining insights from real world data in JavaScript, introducing tools and options for steps in the data science workflow from data access to visualization and communication.
+
+[Recordings and materials](https://observablehq.com/d/4b2146fce6378885?collection=@observablehq/courses)

@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - href: talks_workshops.qmd
-        text: Talks / Workshops
+        text: Talks / Workshops / Courses
       - href: cv.qmd
         text: CV
       - href: posts.qmd

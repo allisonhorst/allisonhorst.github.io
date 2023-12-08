@@ -1,5 +1,5 @@
 ---
-title: "Talks and Workshops"
+title: "Talks, Workshops, and Courses"
 listing:
   contents: talks
   sort: "date desc"

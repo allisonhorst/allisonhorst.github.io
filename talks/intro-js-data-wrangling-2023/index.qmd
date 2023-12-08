@@ -1,0 +1,9 @@
+---
+authors: [Allison Horst]
+date: "2023-04-01"
+title: Introduction to data wrangling and analysis in JavaScript
+---
+
+A 4-session introductory JavaScript course with a focus on accessing, wrangling, and analyzing data. 
+
+[Recordings](https://www.youtube.com/playlist?list=PLOHIJAFwtkEcjy_ITzTN55tgnx4ZL_M_S) | [Materials](https://observablehq.com/collection/@observablehq/introduction-to-data-wrangling-and-analysis-in-javascript)

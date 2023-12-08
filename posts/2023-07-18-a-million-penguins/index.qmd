@@ -1,15 +1,45 @@
 ---
-title: "A million palmerpenguins (on CRAN)"
+title: "A million penguins"
 author: "Allison Horst"
-date: '2023-07-18'
+date: '2023-08-18'
 format: 
   html:
     code-fold: true
 featured: no
+draft: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+If you’d told me in May 2020 that 344 penguins would change my life, you’d have been met with a face of utter confusion and disbelief. But here I am, just over 3 years later, considering the sequence of events that has made it so.
+
+```{r}
+#| include: false
+library(cranlogs)
+library(tidyverse)
+library(scales)
 ```
 
-If you'd told me in May 2020 that 344 penguins would change my life, you'd have been met with a face of utter confusion and disbelief. But here I am, just over 3 years later, considering the sequence of events that has made it so. 
+```{r}
+#| include: false
+downloads = cranlogs::cran_downloads(package = "palmerpenguins", from = "2020-07-23", to = "2023-12-08") |> mutate(cumulative = cumsum(count))
+```
+
+```{r}
+#| echo: false
+#| warning: false
+ggplot(downloads, aes(x = date, y = cumulative)) +
+  geom_line(linewidth = 1, color = "dodgerblue") +
+  labs(x = "",
+       y = "",
+       title = "palmerpenguins CRAN downloads") + 
+  scale_y_continuous(labels = label_number(suffix = "M", scale = 1e-6, big.mark = ","), limits = c(0, 1.2e6), breaks = c(0, 0.25e6, 0.5e6, 0.75e6, 1e6), expand = c(0,0)) +
+  geom_hline(aes(yintercept = 1e6), color = "darkorange", linetype = "dashed" ) +
+  theme_light()
+
+```
+
+The story of [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) actually began long before I discovered the penguins datasets while scouring [Environmental Data Initiative](https://edirepository.org/) packages to use in my intro data science course at UCSB. It started when Dr. Kristen B. Gorman, as part of her PhD research, traveled to Palmer Station Long Term Ecological Research site in Antarctica to gather data on penguins from 2007 - 2009. 
+
+![](kristen_gorman_penguins.png)
+
+Kristen later published her work in her 2014 PLoS ONE paper [Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus *Pygoscelis*).](https://doi.org/10.1371/journal.pone.0090081), and went on to openly share the size and isotopic measurements for each of three penguin species (Adélie, chinstrap and gentoo). 
+
