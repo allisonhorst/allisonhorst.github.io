@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.4.509">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,7 +63,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -70,9 +77,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -90,6 +97,7 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -98,45 +106,51 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Allison Horst</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./talks_workshops.html" aria-current="page">Talks / Workshops</a>
+    <a class="nav-link active" href="./talks_workshops.html" aria-current="page"> 
+<span class="menu-text">Talks / Workshops</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html">CV</a>
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html">Posts</a>
+    <a class="nav-link" href="./posts.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/allisonhorst/"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/allisonhorst/"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- </a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/allison_horst"><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/allison_horst"> <i class="bi bi-twitter" role="img">
 </i> 
- </a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -144,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
@@ -157,12 +171,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
+  
     
   </div>
   
+
 
 </header>
 
@@ -170,69 +186,78 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1643788800000" data-listing-file-modified-sort="1665772177094" data-listing-reading-time-sort="0.535">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1643788800000" data-listing-file-modified-sort="1665772177094" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="thumbnail">
+<p><a href="./talks/nceas_roundtable_2022/index.html" class="no-external"></a></p><a href="./talks/nceas_roundtable_2022/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/nceas_roundtable_2022/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/nceas_roundtable_2022/index.html">
 <h3 class="no-anchor listing-title">
-Making monsters - Where they came from, what they’ve taught me, and how you can make them, too
+<a href="./talks/nceas_roundtable_2022/index.html" class="no-external">Making monsters - Where they came from, what they’ve taught me, and how you can make them, too</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/nceas_roundtable_2022/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-
-Invited talk for NCEAS Roundtable. Art can provide a welcoming entryway for learners to engage with sometimes intimidating coding skills. In the first half of this session, I will describe the rise of the R monsters (illustrated characters that I create to help make data science and stats concepts and tools more approachable), my experiences as NCEAS’ and RStudio’s Artist-in-Residence, and a few unexpected lessons I’ve learned from the monsters along the way. In the second half of the session, all attendees will be invited to join in an art lesson during which everyone will follow along to create a charismatic collection of monsters of your own.
+<a href="./talks/nceas_roundtable_2022/index.html" class="no-external">Invited talk for NCEAS Roundtable. Art can provide a welcoming entryway for learners to engage with sometimes intimidating coding skills. In the first half of this session…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/nceas_roundtable_2022/index.html">
+<a href="./talks/nceas_roundtable_2022/index.html" class="no-external">
 <div class="listing-date">
 Feb 2, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1641888000000" data-listing-file-modified-sort="1665771201068" data-listing-reading-time-sort="0.16">
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1641888000000" data-listing-file-modified-sort="1665771201068" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="thumbnail">
+<p><a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html" class="no-external"></a></p><a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html">
 <h3 class="no-anchor listing-title">
-R Markdown for fun, functional and reproducible reporting
+<a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html" class="no-external">R Markdown for fun, functional and reproducible reporting</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A 1-hour code-along workshop on R Markdown for reproducible data science and reporting for the 2022 Urban Drainage Modeling Conference, hosted by the Southern California Coastal Watershed Research Program (SCCWRP)
+<a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html" class="no-external">A 1-hour code-along workshop on R Markdown for reproducible data science and reporting for the 2022 Urban Drainage Modeling Conference, hosted by the Southern California…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html">
+<a href="./talks/urban_drainage_2022_rmarkdown_workshop/index.html" class="no-external">
 <div class="listing-date">
 Jan 11, 2022
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1641888000000" data-listing-file-modified-sort="1665771264579" data-listing-reading-time-sort="0.665">
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1641888000000" data-listing-file-modified-sort="1665771264579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="133">
+<div class="thumbnail">
+<p><a href="./talks/urban_drainage_2022/index.html" class="no-external"></a></p><a href="./talks/urban_drainage_2022/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/urban_drainage_2022/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/urban_drainage_2022/index.html">
 <h3 class="no-anchor listing-title">
-Missing the point - missing values, misinterpretations, and missed opportunities in environmental data science
+<a href="./talks/urban_drainage_2022/index.html" class="no-external">Missing the point - missing values, misinterpretations, and missed opportunities in environmental data science</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/urban_drainage_2022/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Invited plenary talk for the Urban Drainage Modeling Conference, hybrid remote and at SCCWRP.
+<a href="./talks/urban_drainage_2022/index.html" class="no-external">Invited plenary talk for the Urban Drainage Modeling Conference, hybrid remote and at SCCWRP.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/urban_drainage_2022/index.html">
+<a href="./talks/urban_drainage_2022/index.html" class="no-external">
 <div class="listing-date">
 Jan 11, 2022
 </div>
@@ -242,418 +267,475 @@ Allison Horst
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1638518400000" data-listing-file-modified-sort="1665771438921" data-listing-reading-time-sort="0.05">
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1638518400000" data-listing-file-modified-sort="1665771438921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="10">
+<div class="thumbnail">
+<p><a href="./talks/ucsb_ds_summit_2021/index.html" class="no-external"></a></p><a href="./talks/ucsb_ds_summit_2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/ucsb_ds_summit_2021/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/ucsb_ds_summit_2021/index.html">
 <h3 class="no-anchor listing-title">
-Introducing UCSB’s New Master of Environmental Data Science Program
+<a href="./talks/ucsb_ds_summit_2021/index.html" class="no-external">Introducing UCSB’s New Master of Environmental Data Science Program</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/ucsb_ds_summit_2021/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Invited presentation at the 2021 UCSB Data Science Summit.
+<a href="./talks/ucsb_ds_summit_2021/index.html" class="no-external">Invited presentation at the 2021 UCSB Data Science Summit.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/ucsb_ds_summit_2021/index.html">
+<a href="./talks/ucsb_ds_summit_2021/index.html" class="no-external">
 <div class="listing-date">
 Dec 3, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1636009200000" data-listing-file-modified-sort="1665772038599" data-listing-reading-time-sort="0.1">
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1636009200000" data-listing-file-modified-sort="1665772038599" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="20">
+<div class="thumbnail">
+<p><a href="./talks/qmss_seminar_teachingR_2021/index.html" class="no-external"></a></p><a href="./talks/qmss_seminar_teachingR_2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/qmss_seminar_teachingR_2021/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/qmss_seminar_teachingR_2021/index.html">
 <h3 class="no-anchor listing-title">
-Tips &amp; tools for gentle R introductions
+<a href="./talks/qmss_seminar_teachingR_2021/index.html" class="no-external">Tips &amp; tools for gentle R introductions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/qmss_seminar_teachingR_2021/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-An invited talk on strategies for introducing beginners to R for UCSB’s Quantitative Methods in Social Sciences program.
+<a href="./talks/qmss_seminar_teachingR_2021/index.html" class="no-external">An invited talk on strategies for introducing beginners to R for UCSB’s Quantitative Methods in Social Sciences program.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/qmss_seminar_teachingR_2021/index.html">
+<a href="./talks/qmss_seminar_teachingR_2021/index.html" class="no-external">
 <div class="listing-date">
 Nov 4, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1628492400000" data-listing-file-modified-sort="1665772323988" data-listing-reading-time-sort="0.105">
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1628492400000" data-listing-file-modified-sort="1665772323988" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<div class="thumbnail">
+<p><a href="./talks/jsm_2021/index.html" class="no-external"></a></p><a href="./talks/jsm_2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/jsm_2021/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/jsm_2021/index.html">
 <h3 class="no-anchor listing-title">
-Creative Contributions and Activities for Student Engagement and Learning in Data Science Education
+<a href="./talks/jsm_2021/index.html" class="no-external">Creative Contributions and Activities for Student Engagement and Learning in Data Science Education</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/jsm_2021/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-An invited talk for the Developing and Maintaining Open Source Resources for Statistics and Data Science Education Session, JSM 2021.
+<a href="./talks/jsm_2021/index.html" class="no-external">An invited talk for the Developing and Maintaining Open Source Resources for Statistics and Data Science Education Session, JSM 2021.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/jsm_2021/index.html">
+<a href="./talks/jsm_2021/index.html" class="no-external">
 <div class="listing-date">
 Aug 9, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1627887600000" data-listing-file-modified-sort="1665772367219" data-listing-reading-time-sort="0.14">
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1627887600000" data-listing-file-modified-sort="1665772367219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="28">
+<div class="thumbnail">
+<p><a href="./talks/esa_2021/index.html" class="no-external"></a></p><a href="./talks/esa_2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/esa_2021/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/esa_2021/index.html">
 <h3 class="no-anchor listing-title">
-Leveraging data richness of the Long Term Ecological Research Network for an R datasets package
+<a href="./talks/esa_2021/index.html" class="no-external">Leveraging data richness of the Long Term Ecological Research Network for an R datasets package</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/esa_2021/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A regular talk at the 2021 ESA Conference, highlighting our work to make an R package containing one data sample from each site in the US LTER Network.
+<a href="./talks/esa_2021/index.html" class="no-external">A regular talk at the 2021 ESA Conference, highlighting our work to make an R package containing one data sample from each site in the US LTER Network.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/esa_2021/index.html">
+<a href="./talks/esa_2021/index.html" class="no-external">
 <div class="listing-date">
 Aug 2, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1625641200000" data-listing-file-modified-sort="1665771097526" data-listing-reading-time-sort="0.035">
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1625641200000" data-listing-file-modified-sort="1665771097526" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="thumbnail">
+<p><a href="./talks/useR_2021/index.html" class="no-external"></a></p><a href="./talks/useR_2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/useR_2021/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/useR_2021/index.html">
 <h3 class="no-anchor listing-title">
-Developing a datasets based R package to teach environmental data science
+<a href="./talks/useR_2021/index.html" class="no-external">Developing a datasets based R package to teach environmental data science</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/useR_2021/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Presented virtually at the useR!2021 Conference [Slides]
+<a href="./talks/useR_2021/index.html" class="no-external">Presented virtually at the useR!2021 Conference [Slides]</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/useR_2021/index.html">
+<a href="./talks/useR_2021/index.html" class="no-external">
 <div class="listing-date">
 Jul 7, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1622098800000" data-listing-file-modified-sort="1665772500921" data-listing-reading-time-sort="0.07">
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1622098800000" data-listing-file-modified-sort="1665772500921" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
+<div class="thumbnail">
+<p><a href="./talks/dsxd_education_session_2021/index.html" class="no-external"></a></p><a href="./talks/dsxd_education_session_2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/dsxd_education_session_2021/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/dsxd_education_session_2021/index.html">
 <h3 class="no-anchor listing-title">
-Creativity to learn, creativity to teach.
+<a href="./talks/dsxd_education_session_2021/index.html" class="no-external">Creativity to learn, creativity to teach.</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/dsxd_education_session_2021/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-Presentation for the education session of the 2021 Data Science by Design Creator Conference.
+<a href="./talks/dsxd_education_session_2021/index.html" class="no-external">Presentation for the education session of the 2021 Data Science by Design Creator Conference.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/dsxd_education_session_2021/index.html">
+<a href="./talks/dsxd_education_session_2021/index.html" class="no-external">
 <div class="listing-date">
 May 27, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1618988400000" data-listing-file-modified-sort="1665771581277" data-listing-reading-time-sort="0.085">
+<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1618988400000" data-listing-file-modified-sort="1665771581277" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="17">
+<div class="thumbnail">
+<p><a href="./talks/sb_users_penguins_flash/index.html" class="no-external"></a></p><a href="./talks/sb_users_penguins_flash/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/sb_users_penguins_flash/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/sb_users_penguins_flash/index.html">
 <h3 class="no-anchor listing-title">
-Tired - iris. Wired - penguins.
+<a href="./talks/sb_users_penguins_flash/index.html" class="no-external">Tired - iris. Wired - penguins.</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/sb_users_penguins_flash/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A flash talk on the new palmerpenguins package in R for the Santa Barbara R Users Group.
+<a href="./talks/sb_users_penguins_flash/index.html" class="no-external">A flash talk on the new palmerpenguins package in R for the Santa Barbara R Users Group.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/sb_users_penguins_flash/index.html">
+<a href="./talks/sb_users_penguins_flash/index.html" class="no-external">
 <div class="listing-date">
 Apr 21, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-listing-date-sort="1613203200000" data-listing-file-modified-sort="1665771786828" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="10" data-listing-date-sort="1613203200000" data-listing-file-modified-sort="1665771786828" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="thumbnail">
+<p><a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html" class="no-external"></a></p><a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html">
 <h3 class="no-anchor listing-title">
-R-Ladies Tunis &amp; R-Ladies Dammam Workshop: A Quick Flight to the Edge of the Tidyverse
+<a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html" class="no-external">R-Ladies Tunis &amp; R-Ladies Dammam Workshop: A Quick Flight to the Edge of the Tidyverse</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A 2-hour code-along “Quick Flight to the Edge of the Tidyverse” with R-Ladies.
+<a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html" class="no-external">A 2-hour code-along “Quick Flight to the Edge of the Tidyverse” with R-Ladies.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html">
+<a href="./talks/rladies_tunis_saudiarabia_tidyverse_intro/index.html" class="no-external">
 <div class="listing-date">
 Feb 13, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-listing-date-sort="1612857600000" data-listing-file-modified-sort="1665771048737" data-listing-reading-time-sort="0.07">
+<div class="quarto-post image-right" data-index="11" data-listing-date-sort="1612857600000" data-listing-file-modified-sort="1665771048737" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
+<div class="thumbnail">
+<p><a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html" class="no-external"></a></p><a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html">
 <h3 class="no-anchor listing-title">
-UCSB QMSS Workshop - Level up in R Markdown
+<a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html" class="no-external">UCSB QMSS Workshop - Level up in R Markdown</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A workshop for UCSB’s Quantitative Methods in Social Sciences program.
+<a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html" class="no-external">A workshop for UCSB’s Quantitative Methods in Social Sciences program.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html">
+<a href="./talks/ucsb_qmss_rmarkdown_workshop/index.html" class="no-external">
 <div class="listing-date">
 Feb 9, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-listing-date-sort="1611475200000" data-listing-file-modified-sort="1665771669043" data-listing-reading-time-sort="0.08">
+<div class="quarto-post image-right" data-index="12" data-listing-date-sort="1611475200000" data-listing-file-modified-sort="1665771669043" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
+<div class="thumbnail">
+<p><a href="./talks/rstudio_global_2021/index.html" class="no-external"></a></p><a href="./talks/rstudio_global_2021/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/rstudio_global_2021/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/rstudio_global_2021/index.html">
 <h3 class="no-anchor listing-title">
-Art lessons - A year as RStudio’s Artist-in-Residence
+<a href="./talks/rstudio_global_2021/index.html" class="no-external">Art lessons - A year as RStudio’s Artist-in-Residence</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/rstudio_global_2021/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-My rstudio::conf2021 on motivation and lessons learned from my time as RStudio’s first artist-in-residence.
+<a href="./talks/rstudio_global_2021/index.html" class="no-external">My rstudio::conf2021 on motivation and lessons learned from my time as RStudio’s first artist-in-residence.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/rstudio_global_2021/index.html">
+<a href="./talks/rstudio_global_2021/index.html" class="no-external">
 <div class="listing-date">
 Jan 24, 2021
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-listing-date-sort="1605686400000" data-listing-file-modified-sort="1665772099903" data-listing-reading-time-sort="0.06">
+<div class="quarto-post image-right" data-index="13" data-listing-date-sort="1605686400000" data-listing-file-modified-sort="1665772099903" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
+<div class="thumbnail">
+<p><a href="./talks/nhs_r_2020/index.html" class="no-external"></a></p><a href="./talks/nhs_r_2020/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/nhs_r_2020/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/nhs_r_2020/index.html">
 <h3 class="no-anchor listing-title">
-Illustrating R - Creative contributions for R education and engagement
+<a href="./talks/nhs_r_2020/index.html" class="no-external">Illustrating R - Creative contributions for R education and engagement</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/nhs_r_2020/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-An invited talk for NHS-R on creative contributions in data science education.
+<a href="./talks/nhs_r_2020/index.html" class="no-external">An invited talk for NHS-R on creative contributions in data science education.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/nhs_r_2020/index.html">
+<a href="./talks/nhs_r_2020/index.html" class="no-external">
 <div class="listing-date">
 Nov 18, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-listing-date-sort="1605340800000" data-listing-file-modified-sort="1665771329880" data-listing-reading-time-sort="0.055">
+<div class="quarto-post image-right" data-index="14" data-listing-date-sort="1605340800000" data-listing-file-modified-sort="1665771329880" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="11">
+<div class="thumbnail">
+<p><a href="./talks/ucsb_gds_2020/index.html" class="no-external"></a></p><a href="./talks/ucsb_gds_2020/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/ucsb_gds_2020/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/ucsb_gds_2020/index.html">
 <h3 class="no-anchor listing-title">
-Art in Data Science Education
+<a href="./talks/ucsb_gds_2020/index.html" class="no-external">Art in Data Science Education</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/ucsb_gds_2020/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-An invited talk for UCSB Graduate Students for Diversity in STEM
+<a href="./talks/ucsb_gds_2020/index.html" class="no-external">An invited talk for UCSB Graduate Students for Diversity in STEM</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/ucsb_gds_2020/index.html">
+<a href="./talks/ucsb_gds_2020/index.html" class="no-external">
 <div class="listing-date">
 Nov 14, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-listing-date-sort="1589871600000" data-listing-file-modified-sort="1665772266139" data-listing-reading-time-sort="0.23">
+<div class="quarto-post image-right" data-index="15" data-listing-date-sort="1589871600000" data-listing-file-modified-sort="1665772266139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="46">
+<div class="thumbnail">
+<p><a href="./talks/missing_explorer_2020/index.html" class="no-external"></a></p><a href="./talks/missing_explorer_2020/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/missing_explorer_2020/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/missing_explorer_2020/index.html">
 <h3 class="no-anchor listing-title">
-How to Become a Missing Explorer
+<a href="./talks/missing_explorer_2020/index.html" class="no-external">How to Become a Missing Explorer</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/missing_explorer_2020/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A talk and interactive tutorial at the Bren School (UC Santa Barbara) on why and how we should think about missing values in our environmental data, and how we can use Nick Tierney’s naniar package in R to help us becoming a missing (data) explorer.
+<a href="./talks/missing_explorer_2020/index.html" class="no-external">A talk and interactive tutorial at the Bren School (UC Santa Barbara) on why and how we should think about missing values in our environmental data, and how we can use Nick…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/missing_explorer_2020/index.html">
+<a href="./talks/missing_explorer_2020/index.html" class="no-external">
 <div class="listing-date">
 May 19, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-listing-date-sort="1582185600000" data-listing-file-modified-sort="1665771965349" data-listing-reading-time-sort="0.135">
+<div class="quarto-post image-right" data-index="16" data-listing-date-sort="1582185600000" data-listing-file-modified-sort="1665771965349" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="27">
+<div class="thumbnail">
+<p><a href="./talks/r_for_excel_2020/index.html" class="no-external"></a></p><a href="./talks/r_for_excel_2020/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/r_for_excel_2020/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/r_for_excel_2020/index.html">
 <h3 class="no-anchor listing-title">
-R for Excel Users Workshop at RStudio Conference 2020
+<a href="./talks/r_for_excel_2020/index.html" class="no-external">R for Excel Users Workshop at RStudio Conference 2020</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/r_for_excel_2020/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A 2-day workshop to get Excel users and R beginners up-and-running with the basic tools, reproducible workflows and supportive communities for the modern R user.
+<a href="./talks/r_for_excel_2020/index.html" class="no-external">A 2-day workshop to get Excel users and R beginners up-and-running with the basic tools, reproducible workflows and supportive communities for the modern R user.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/r_for_excel_2020/index.html">
+<a href="./talks/r_for_excel_2020/index.html" class="no-external">
 <div class="listing-date">
 Feb 20, 2020
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-listing-date-sort="1573718400000" data-listing-file-modified-sort="1665771529353" data-listing-reading-time-sort="0.12">
+<div class="quarto-post image-right" data-index="17" data-listing-date-sort="1573718400000" data-listing-file-modified-sort="1665771529353" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
+<div class="thumbnail">
+<p><a href="./talks/sccwrp_dataviz_2019/index.html" class="no-external"></a></p><a href="./talks/sccwrp_dataviz_2019/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/sccwrp_dataviz_2019/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/sccwrp_dataviz_2019/index.html">
 <h3 class="no-anchor listing-title">
-SCCWRP Data Visualization Workshop
+<a href="./talks/sccwrp_dataviz_2019/index.html" class="no-external">SCCWRP Data Visualization Workshop</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/sccwrp_dataviz_2019/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A 1/2 day basics of data visualization workshop on responsible and effective data visualization for the Southern California Coastal Watershed Research Program (SCCWRP).
+<a href="./talks/sccwrp_dataviz_2019/index.html" class="no-external">A 1/2 day basics of data visualization workshop on responsible and effective data visualization for the Southern California Coastal Watershed Research Program (SCCWRP).</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/sccwrp_dataviz_2019/index.html">
+<a href="./talks/sccwrp_dataviz_2019/index.html" class="no-external">
 <div class="listing-date">
 Nov 14, 2019
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-listing-date-sort="1572418800000" data-listing-file-modified-sort="1665771865344" data-listing-reading-time-sort="0.095">
+<div class="quarto-post image-right" data-index="18" data-listing-date-sort="1572418800000" data-listing-file-modified-sort="1665771865344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="19">
+<div class="thumbnail">
+<p><a href="./talks/rladies_shiny/index.html" class="no-external"></a></p><a href="./talks/rladies_shiny/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/rladies_shiny/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/rladies_shiny/index.html">
 <h3 class="no-anchor listing-title">
-SB R-Ladies Intro to (spooky) Shiny
+<a href="./talks/rladies_shiny/index.html" class="no-external">SB R-Ladies Intro to (spooky) Shiny</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/rladies_shiny/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A 1-hour introduction to Shiny in R, led during a Santa Barbara R-Ladies session in Oct 2019.
+<a href="./talks/rladies_shiny/index.html" class="no-external">A 1-hour introduction to Shiny in R, led during a Santa Barbara R-Ladies session in Oct 2019.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/rladies_shiny/index.html">
+<a href="./talks/rladies_shiny/index.html" class="no-external">
 <div class="listing-date">
 Oct 30, 2019
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-listing-date-sort="1568617200000" data-listing-file-modified-sort="1665772573030" data-listing-reading-time-sort="0.15">
+<div class="quarto-post image-right" data-index="19" data-listing-date-sort="1568617200000" data-listing-file-modified-sort="1665772573030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="thumbnail">
+<p><a href="./talks/bren_phd_workshop/index.html" class="no-external"></a></p><a href="./talks/bren_phd_workshop/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/bren_phd_workshop/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/bren_phd_workshop/index.html">
 <h3 class="no-anchor listing-title">
-Quantitative skills and R/RStudio workshop for incoming Bren PhD students
+<a href="./talks/bren_phd_workshop/index.html" class="no-external">Quantitative skills and R/RStudio workshop for incoming Bren PhD students</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/bren_phd_workshop/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-An intensive 7-day workshop to refresh quantitative skills (quantitative thinking, algebra, calculus, probability, hypothesis testing, regress) and introduce PhD students to reproducible code and workflows in R and RStudio.
+<a href="./talks/bren_phd_workshop/index.html" class="no-external">An intensive 7-day workshop to refresh quantitative skills (quantitative thinking, algebra, calculus, probability, hypothesis testing, regress) and introduce PhD students to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/bren_phd_workshop/index.html">
+<a href="./talks/bren_phd_workshop/index.html" class="no-external">
 <div class="listing-date">
 Sep 16, 2019
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-listing-date-sort="1565852400000" data-listing-file-modified-sort="1665772641707" data-listing-reading-time-sort="0.15">
+<div class="quarto-post image-right" data-index="20" data-listing-date-sort="1565852400000" data-listing-file-modified-sort="1665772641707" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="30">
+<div class="thumbnail">
+<p><a href="./talks/bren_alumni_2019/index.html" class="no-external"></a></p><a href="./talks/bren_alumni_2019/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/bren_alumni_2019/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/bren_alumni_2019/index.html">
 <h3 class="no-anchor listing-title">
-Bren alumni R-refresher workshop
+<a href="./talks/bren_alumni_2019/index.html" class="no-external">Bren alumni R-refresher workshop</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/bren_alumni_2019/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A 4-session refresher/reintroduction to data wrangling and visualization with the tidyverse, building Shiny apps, and an intro to working with and visualizing spatial data using sf, tmap and ggplot2.
+<a href="./talks/bren_alumni_2019/index.html" class="no-external">A 4-session refresher/reintroduction to data wrangling and visualization with the tidyverse, building Shiny apps, and an intro to working with and visualizing spatial data…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/bren_alumni_2019/index.html">
+<a href="./talks/bren_alumni_2019/index.html" class="no-external">
 <div class="listing-date">
 Aug 15, 2019
 </div>
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-listing-date-sort="1542441600000" data-listing-file-modified-sort="1665772425798" data-listing-reading-time-sort="0.075">
+<div class="quarto-post image-right" data-index="21" data-listing-date-sort="1542441600000" data-listing-file-modified-sort="1665772425798" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="thumbnail">
+<p><a href="./talks/ecodatasci_ggplot_intro/index.html" class="no-external"></a></p><a href="./talks/ecodatasci_ggplot_intro/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/ecodatasci_ggplot_intro/index.html" class="no-external"></a></p>
+</div>
 <div class="body">
-<a href="./talks/ecodatasci_ggplot_intro/index.html">
 <h3 class="no-anchor listing-title">
-Intro to ggplot2 for eco-data-science
+<a href="./talks/ecodatasci_ggplot_intro/index.html" class="no-external">Intro to ggplot2 for eco-data-science</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./talks/ecodatasci_ggplot_intro/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-A gentle 2-hour introduction to building and customizing plots with ggplot2, presented at UCSB Eco-Data-Science.
+<a href="./talks/ecodatasci_ggplot_intro/index.html" class="no-external">A gentle 2-hour introduction to building and customizing plots with ggplot2, presented at UCSB Eco-Data-Science.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./talks/ecodatasci_ggplot_intro/index.html">
+<a href="./talks/ecodatasci_ggplot_intro/index.html" class="no-external">
 <div class="listing-date">
 Nov 17, 2018
 </div>
@@ -692,9 +774,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -706,17 +802,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -726,8 +838,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -742,28 +863,289 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

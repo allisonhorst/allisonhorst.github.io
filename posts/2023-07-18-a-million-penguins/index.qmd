@@ -1,0 +1,15 @@
+---
+title: "A million palmerpenguins (on CRAN)"
+author: "Allison Horst"
+date: '2023-07-18'
+format: 
+  html:
+    code-fold: true
+featured: no
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+If you'd told me in May 2020 that 344 penguins would change my life, you'd have been met with a face of utter confusion and disbelief. But here I am, just over 3 years later, considering the sequence of events that has made it so. 

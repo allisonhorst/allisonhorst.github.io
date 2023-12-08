@@ -29,12 +29,12 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/2023-07-18-a-million-penguins/index.html",
       "/posts/2022-10-14-bird-attacks/index.html",
       "/posts/2022-03-12-shrinking-glaciers/index.html",
       "/posts/2022-03-10-tree-mortality-fires/index.html",
       "/posts/2022-03-08-nw-reno-roads/index.html",
       "/posts/2022-03-07-scrape-dart-fish/index.html",
-      "/posts/2021-09-02-learning-github-classroom/index.html",
       "/posts/2021-03-31-joining-teams/index.html",
       "/posts/2021-02-08-dplyr-learnr/index.html",
       "/posts/2020-08-01-palmerpenguins-on-cran/index.html",
